@@ -1,0 +1,13 @@
+# LightDock swarm output directories (regenerate with: lgd_generate_conformations.py)
+swarm_*/
+init/
+lightdock_*.pdb
+lightdock_receptor.pdb
+lightdock_ligand.pdb
+lightdock_receptor_mask.npy
+lightdock_ligand_mask.npy
+rank_by_luciferin.list
+rank_by_rmsd.list
+solutions.list
+lightdock.info
+lightdock.info.*
