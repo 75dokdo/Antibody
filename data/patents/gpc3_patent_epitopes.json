@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "target": "GPC3 / Glypican-3 (UniProt P51654, GPC3_HUMAN, 580 aa)",
+    "purpose": "Curated reference of published / patent-claimed epitopes on GPC3, for freedom-to-operate (FTO) style epitope screening of new antibody campaigns.",
+    "numbering_convention": "All 'uniprot_residues' fields use FULL-LENGTH UniProt P51654 numbering (signal peptide 1-24 included). The companion structure files use MATURE numbering where Q1 == UniProt Q25, i.e. uniprot = mature + 24.",
+    "numbering_offset_uniprot_minus_mature": 24,
+    "compiled": "2026-09-01",
+    "evidence_levels": {
+      "high": "explicit residue numbers or peptide sequence stated in a primary publication or granted patent claim",
+      "medium": "residue range stated in review / abstract level source",
+      "low": "domain-level assignment only (e.g. 'N-lobe'), no residue numbers"
+    },
+    "DISCLAIMER": "This is a research triage aid, NOT a legal freedom-to-operate opinion. Epitope overlap is only one factor in antibody patent infringement; most antibody claims are drafted around CDR sequences, not epitopes. A qualified patent attorney must review any commercial program."
+  },
+
+  "epitopes": [
+    {
+      "id": "GC33",
+      "antibody": "GC33 / codrituzumab (humanized)",
+      "owner": "Chugai / Roche",
+      "patents": ["US7919086B2", "US7776329", "EP2216046A3"],
+      "uniprot_residues": {"start": 524, "end": 563},
+      "core_uniprot_residues": {"start": 544, "end": 553},
+      "core_peptide": "PKDNEISTFH",
+      "epitope_type": "linear",
+      "lobe": "C-lobe",
+      "notes": "Immunogen was a C-terminal fragment. Epitope sits close to the GPI anchor / membrane-proximal. Most clinically advanced anti-GPC3 mAb (phase II HCC).",
+      "evidence": "high"
+    },
+    {
+      "id": "YP7",
+      "antibody": "YP7 / hYP7 (humanized)",
+      "owner": "NIH / NCI (Mitchell Ho lab)",
+      "patents": ["US9409994B2", "WO2013181543"],
+      "uniprot_residues": {"start": 510, "end": 560},
+      "core_uniprot_residues": {"start": 521, "end": 530},
+      "epitope_type": "linear",
+      "lobe": "C-lobe",
+      "notes": "Raised against peptide 511-560. hYP7 is the basis of multiple CAR-T and ADC programs. Very high affinity (Kd ~0.3 nM).",
+      "evidence": "high"
+    },
+    {
+      "id": "32A9",
+      "antibody": "32A9 (human, phage display)",
+      "owner": "academic (Journal of Translational Medicine 2020) + related filings",
+      "patents": ["see J Transl Med 18:295 (2020); associated CN/US filings"],
+      "uniprot_residues": {"start": 464, "end": 474},
+      "additional_uniprot_residues": [295],
+      "epitope_type": "conformational",
+      "lobe": "C-lobe (near HS attachment sites)",
+      "hot_residues": ["Y295", "D464", "K467", "H468", "Q471", "R474"],
+      "notes": "Alanine-scan hot spots. Epitope lies close to the HS chain modification sites and OUTSIDE the Wnt-binding site. Bridges the C-terminal part of the N-lobe (Y295) with the C-lobe.",
+      "evidence": "high"
+    },
+    {
+      "id": "HN3",
+      "antibody": "HN3 (fully human VH single-domain)",
+      "owner": "NIH / NCI (Mitchell Ho lab)",
+      "patents": ["WO2012145469A1", "EP2998320A1"],
+      "uniprot_residues": {"start": 25, "end": 358},
+      "epitope_type": "conformational",
+      "lobe": "N-lobe (requires both N- and C-terminal domains for binding)",
+      "notes": "Binds the membrane-distal tip of the N-lobe. Conformation-specific: binding is lost on denatured GPC3 and requires the intact N+C domain pair. HS-independent. Range given here is the whole N-lobe, so overlap scoring against it is deliberately conservative (worst case).",
+      "evidence": "low"
+    },
+    {
+      "id": "HN3_competing_cluster",
+      "antibody": "J80A, F5, C46, I82 (HN3-competing mAb panel)",
+      "owner": "NIH / NCI",
+      "patents": ["covered by / related to the HN3 family filings"],
+      "uniprot_residues": {"start": 25, "end": 358},
+      "epitope_type": "conformational",
+      "lobe": "N-lobe",
+      "notes": "Panel that cross-blocks HN3; mapped with alanine and L428K mutants. Indicates the N-lobe surface is competitively crowded even where exact residues are unpublished.",
+      "evidence": "low"
+    },
+    {
+      "id": "HS20",
+      "antibody": "HS20",
+      "owner": "NIH / NCI",
+      "patents": ["HS-directed GPC3 antibody filings"],
+      "uniprot_residues": {"start": 495, "end": 509},
+      "epitope_type": "glycan (heparan sulfate chains)",
+      "lobe": "C-lobe / HS attachment region",
+      "notes": "Binds the heparan sulfate CHAINS, not the protein core. HS attachment serines are S495 and S509. A protein-core binder in this window may still sterically clash with HS chains.",
+      "evidence": "medium"
+    },
+    {
+      "id": "1G12",
+      "antibody": "1G12 (diagnostic IHC standard)",
+      "owner": "BioMosaics",
+      "patents": ["commercial diagnostic reagent"],
+      "uniprot_residues": {"start": 511, "end": 580},
+      "epitope_type": "linear",
+      "lobe": "C-lobe",
+      "notes": "Raised against the C-terminal 70-residue polypeptide. Widely used IHC reagent, contributes to prior-art density in the C-terminal region.",
+      "evidence": "medium"
+    },
+    {
+      "id": "GC199",
+      "antibody": "GC199",
+      "owner": "Chugai",
+      "patents": ["companion filings to the GC33 family"],
+      "uniprot_residues": {"start": 511, "end": 580},
+      "epitope_type": "linear",
+      "lobe": "C-lobe",
+      "notes": "Also generated with a C-terminal GPC3 fragment as antigen.",
+      "evidence": "medium"
+    }
+  ],
+
+  "functional_hotspots": [
+    {
+      "id": "Wnt_binding_groove",
+      "uniprot_residues": {"start": 38, "end": 60},
+      "key_residue": "F41",
+      "notes": "Cysteine-rich hydrophobic groove in the N-lobe that binds Wnt. Blocking here is mechanistically attractive (Wnt/beta-catenin blockade) but it is the single most obvious functional site on GPC3, so it is heavily prospected. Treat as high prior-art density even though published residue-level antibody epitopes are sparse.",
+      "type": "ligand_binding_site"
+    },
+    {
+      "id": "furin_cleavage_site",
+      "uniprot_residues": {"start": 355, "end": 362},
+      "key_residue": "R358/S359",
+      "notes": "Furin-like convertase cleaves between Arg358 and Ser359, splitting GPC3 into a ~40 kDa N-subunit and a ~30 kDa C-subunit that remain disulfide-linked. An epitope SPANNING this site is a developability liability: the local conformation differs between uncleaved and cleaved GPC3 on the cell surface.",
+      "type": "processing_site"
+    },
+    {
+      "id": "HS_attachment",
+      "uniprot_residues": {"start": 495, "end": 509},
+      "key_residue": "S495, S509",
+      "notes": "Heparan sulfate glycosaminoglycan attachment serines. Bulky HS chains here can sterically occlude nearby protein-core epitopes on native cell-surface GPC3.",
+      "type": "glycosylation_site"
+    },
+    {
+      "id": "GPI_anchor_region",
+      "uniprot_residues": {"start": 560, "end": 580},
+      "notes": "GPI anchor attachment. Membrane-proximal; epitopes here sit very close to the membrane which can help CAR-T synapse formation but limits IgG access.",
+      "type": "membrane_anchor"
+    }
+  ]
+}

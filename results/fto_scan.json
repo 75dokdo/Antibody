@@ -1,0 +1,349 @@
+{
+  "database": {
+    "target": "GPC3 / Glypican-3 (UniProt P51654, GPC3_HUMAN, 580 aa)",
+    "purpose": "Curated reference of published / patent-claimed epitopes on GPC3, for freedom-to-operate (FTO) style epitope screening of new antibody campaigns.",
+    "numbering_convention": "All 'uniprot_residues' fields use FULL-LENGTH UniProt P51654 numbering (signal peptide 1-24 included). The companion structure files use MATURE numbering where Q1 == UniProt Q25, i.e. uniprot = mature + 24.",
+    "numbering_offset_uniprot_minus_mature": 24,
+    "compiled": "2026-09-01",
+    "evidence_levels": {
+      "high": "explicit residue numbers or peptide sequence stated in a primary publication or granted patent claim",
+      "medium": "residue range stated in review / abstract level source",
+      "low": "domain-level assignment only (e.g. 'N-lobe'), no residue numbers"
+    },
+    "DISCLAIMER": "This is a research triage aid, NOT a legal freedom-to-operate opinion. Epitope overlap is only one factor in antibody patent infringement; most antibody claims are drafted around CDR sequences, not epitopes. A qualified patent attorney must review any commercial program."
+  },
+  "regions": [
+    {
+      "region": "GPC3_regionA",
+      "mature_range": [
+        25,
+        160
+      ],
+      "uniprot_range": [
+        49,
+        184
+      ],
+      "n_residues": 136,
+      "n_exposed": 54,
+      "mean_plddt": 91.5,
+      "sequence": "LKWVPETPVPGSDLQVCLPKGPTCCSRKMEEKYQLTARLNMEQLLQSASMELKFLIIQNAAVFQEAFEIVVRHAKNYTNAMFKNNYPSLTPQAFEFVGEFFTDVSLYILGSDINVDDMVNELFDSLFPVIYTQLMN",
+      "verdict": "CLEAR",
+      "risk_score": 0.0,
+      "collisions": [],
+      "advisories": [
+        {
+          "epitope_id": "HN3",
+          "antibody": "HN3 (fully human VH single-domain)",
+          "owner": "NIH / NCI (Mitchell Ho lab)",
+          "patents": [
+            "WO2012145469A1",
+            "EP2998320A1"
+          ],
+          "evidence": "low",
+          "epitope_type": "conformational",
+          "overlap_residues": 136,
+          "exposed_overlap_residues": 54,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "49-184",
+          "score": 0.35,
+          "domain_level": true
+        },
+        {
+          "epitope_id": "HN3_competing_cluster",
+          "antibody": "J80A, F5, C46, I82 (HN3-competing mAb panel)",
+          "owner": "NIH / NCI",
+          "patents": [
+            "covered by / related to the HN3 family filings"
+          ],
+          "evidence": "low",
+          "epitope_type": "conformational",
+          "overlap_residues": 136,
+          "exposed_overlap_residues": 54,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "49-184",
+          "score": 0.35,
+          "domain_level": true
+        }
+      ],
+      "functional_hotspots": [
+        {
+          "id": "Wnt_binding_groove",
+          "type": "ligand_binding_site",
+          "overlap_uniprot": "49-60",
+          "key_residue": "F41",
+          "notes": "Cysteine-rich hydrophobic groove in the N-lobe that binds Wnt. Blocking here is mechanistically attractive (Wnt/beta-catenin blockade) but it is the single most obvious functional site on GPC3, so it is heavily prospected. Treat as high prior-art density even though published residue-level antibody epitopes are sparse."
+        }
+      ],
+      "free_exposed_uniprot": "49-51, 54-58, 60-61, 63, 66-70, 75-76, 79-80, 82-83, 86-88, 91, 94, 98-99, (+15 more)",
+      "n_free_exposed": 54,
+      "free_exposed_fraction": 1.0
+    },
+    {
+      "region": "GPC3_regionB",
+      "mature_range": [
+        190,
+        300
+      ],
+      "uniprot_range": [
+        214,
+        324
+      ],
+      "n_residues": 111,
+      "n_exposed": 31,
+      "mean_plddt": 90.9,
+      "sequence": "LIMTQVSKSLQVTRIFLQALNLGIEVINTTDHLKFSKDCGRMLTRMWYCSYCQGLMMVKPCGGYCNVVMQGCMAGVVEIDKYWREYILSLEELVNGMYRIYDMENVLLGLF",
+      "verdict": "CLEAR",
+      "risk_score": 0.0,
+      "collisions": [
+        {
+          "epitope_id": "32A9",
+          "antibody": "32A9 (human, phage display)",
+          "owner": "academic (Journal of Translational Medicine 2020) + related filings",
+          "patents": [
+            "see J Transl Med 18:295 (2020); associated CN/US filings"
+          ],
+          "evidence": "high",
+          "epitope_type": "conformational",
+          "overlap_residues": 1,
+          "exposed_overlap_residues": 0,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "295",
+          "score": 0.0,
+          "domain_level": false
+        }
+      ],
+      "advisories": [
+        {
+          "epitope_id": "HN3",
+          "antibody": "HN3 (fully human VH single-domain)",
+          "owner": "NIH / NCI (Mitchell Ho lab)",
+          "patents": [
+            "WO2012145469A1",
+            "EP2998320A1"
+          ],
+          "evidence": "low",
+          "epitope_type": "conformational",
+          "overlap_residues": 111,
+          "exposed_overlap_residues": 31,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "214-324",
+          "score": 0.35,
+          "domain_level": true
+        },
+        {
+          "epitope_id": "HN3_competing_cluster",
+          "antibody": "J80A, F5, C46, I82 (HN3-competing mAb panel)",
+          "owner": "NIH / NCI",
+          "patents": [
+            "covered by / related to the HN3 family filings"
+          ],
+          "evidence": "low",
+          "epitope_type": "conformational",
+          "overlap_residues": 111,
+          "exposed_overlap_residues": 31,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "214-324",
+          "score": 0.35,
+          "domain_level": true
+        }
+      ],
+      "functional_hotspots": [],
+      "free_exposed_uniprot": "214, 217, 220-221, 224, 231, 234, 238, 241-242, 245, 247, 250, 253-254, (+13 more)",
+      "n_free_exposed": 31,
+      "free_exposed_fraction": 1.0
+    },
+    {
+      "region": "GPC3_regionC",
+      "mature_range": [
+        320,
+        380
+      ],
+      "uniprot_range": [
+        344,
+        404
+      ],
+      "n_residues": 61,
+      "n_exposed": 41,
+      "mean_plddt": 63.5,
+      "sequence": "TIGKLCAHSQQRQYRSAYYPEDLFIDKKVLKVAHVEHEETLSSRRRELIQKLKSFISFYSA",
+      "verdict": "CLEAR",
+      "risk_score": 0.0,
+      "collisions": [],
+      "advisories": [
+        {
+          "epitope_id": "HN3",
+          "antibody": "HN3 (fully human VH single-domain)",
+          "owner": "NIH / NCI (Mitchell Ho lab)",
+          "patents": [
+            "WO2012145469A1",
+            "EP2998320A1"
+          ],
+          "evidence": "low",
+          "epitope_type": "conformational",
+          "overlap_residues": 15,
+          "exposed_overlap_residues": 11,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "344-358",
+          "score": 0.094,
+          "domain_level": true
+        },
+        {
+          "epitope_id": "HN3_competing_cluster",
+          "antibody": "J80A, F5, C46, I82 (HN3-competing mAb panel)",
+          "owner": "NIH / NCI",
+          "patents": [
+            "covered by / related to the HN3 family filings"
+          ],
+          "evidence": "low",
+          "epitope_type": "conformational",
+          "overlap_residues": 15,
+          "exposed_overlap_residues": 11,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "344-358",
+          "score": 0.094,
+          "domain_level": true
+        }
+      ],
+      "functional_hotspots": [
+        {
+          "id": "furin_cleavage_site",
+          "type": "processing_site",
+          "overlap_uniprot": "355-362",
+          "key_residue": "R358/S359",
+          "notes": "Furin-like convertase cleaves between Arg358 and Ser359, splitting GPC3 into a ~40 kDa N-subunit and a ~30 kDa C-subunit that remain disulfide-linked. An epitope SPANNING this site is a developability liability: the local conformation differs between uncleaved and cleaved GPC3 on the cell surface."
+        }
+      ],
+      "free_exposed_uniprot": "344, 346-348, 350-354, 356, 358-364, 367-368, 370-380, 382, 389-390, 393-394, 396-397, 399-400, (+1 more)",
+      "n_free_exposed": 41,
+      "free_exposed_fraction": 1.0
+    },
+    {
+      "region": "GPC3_regionD",
+      "mature_range": [
+        460,
+        520
+      ],
+      "uniprot_range": [
+        484,
+        544
+      ],
+      "n_residues": 61,
+      "n_exposed": 34,
+      "mean_plddt": 38.8,
+      "sequence": "LDKNLDEEGFESGDCGDDEDECIGGSGDGMIKVKNQLRFLAELAYDLDVDDAPGNSQQATP",
+      "verdict": "HIGH RISK",
+      "risk_score": 1.0,
+      "collisions": [
+        {
+          "epitope_id": "GC33",
+          "antibody": "GC33 / codrituzumab (humanized)",
+          "owner": "Chugai / Roche",
+          "patents": [
+            "US7919086B2",
+            "US7776329",
+            "EP2216046A3"
+          ],
+          "evidence": "high",
+          "epitope_type": "linear",
+          "overlap_residues": 21,
+          "exposed_overlap_residues": 12,
+          "core_overlap_residues": [
+            544
+          ],
+          "overlap_uniprot": "524-544",
+          "score": 1.0,
+          "domain_level": false
+        },
+        {
+          "epitope_id": "YP7",
+          "antibody": "YP7 / hYP7 (humanized)",
+          "owner": "NIH / NCI (Mitchell Ho lab)",
+          "patents": [
+            "US9409994B2",
+            "WO2013181543"
+          ],
+          "evidence": "high",
+          "epitope_type": "linear",
+          "overlap_residues": 35,
+          "exposed_overlap_residues": 18,
+          "core_overlap_residues": [
+            521,
+            522,
+            523,
+            524,
+            525,
+            526,
+            527,
+            528,
+            529,
+            530
+          ],
+          "overlap_uniprot": "510-544",
+          "score": 1.0,
+          "domain_level": false
+        },
+        {
+          "epitope_id": "1G12",
+          "antibody": "1G12 (diagnostic IHC standard)",
+          "owner": "BioMosaics",
+          "patents": [
+            "commercial diagnostic reagent"
+          ],
+          "evidence": "medium",
+          "epitope_type": "linear",
+          "overlap_residues": 34,
+          "exposed_overlap_residues": 17,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "511-544",
+          "score": 0.35,
+          "domain_level": false
+        },
+        {
+          "epitope_id": "GC199",
+          "antibody": "GC199",
+          "owner": "Chugai",
+          "patents": [
+            "companion filings to the GC33 family"
+          ],
+          "evidence": "medium",
+          "epitope_type": "linear",
+          "overlap_residues": 34,
+          "exposed_overlap_residues": 17,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "511-544",
+          "score": 0.35,
+          "domain_level": false
+        },
+        {
+          "epitope_id": "HS20",
+          "antibody": "HS20",
+          "owner": "NIH / NCI",
+          "patents": [
+            "HS-directed GPC3 antibody filings"
+          ],
+          "evidence": "medium",
+          "epitope_type": "glycan (heparan sulfate chains)",
+          "overlap_residues": 15,
+          "exposed_overlap_residues": 9,
+          "core_overlap_residues": [],
+          "overlap_uniprot": "495-509",
+          "score": 0.185,
+          "domain_level": false
+        }
+      ],
+      "advisories": [],
+      "functional_hotspots": [
+        {
+          "id": "HS_attachment",
+          "type": "glycosylation_site",
+          "overlap_uniprot": "495-509",
+          "key_residue": "S495, S509",
+          "notes": "Heparan sulfate glycosaminoglycan attachment serines. Bulky HS chains here can sterically occlude nearby protein-core epitopes on native cell-surface GPC3."
+        }
+      ],
+      "free_exposed_uniprot": "484-487, 489-491",
+      "n_free_exposed": 7,
+      "free_exposed_fraction": 0.206
+    }
+  ]
+}
