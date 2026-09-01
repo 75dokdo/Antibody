@@ -1,0 +1,83 @@
+{
+  "target": {
+    "name": "Fibroblast Activation Protein alpha (FAPα)",
+    "uniprot": "Q12884",
+    "pdb": "1Z68",
+    "pdb_alt": [
+      "5XBT",
+      "5XBU",
+      "6B2H"
+    ],
+    "chain": "A",
+    "ecd_range": [
+      51,
+      760
+    ],
+    "beta_propeller": [
+      51,
+      390
+    ],
+    "epitope_hotspots": [
+      308,
+      310,
+      312,
+      314,
+      355,
+      357,
+      359,
+      361,
+      205,
+      207,
+      209
+    ],
+    "catalytic_triad": [
+      624,
+      702,
+      734
+    ],
+    "dimer_interface": [
+      82,
+      83,
+      84,
+      86,
+      88,
+      415,
+      417
+    ]
+  },
+  "framework": "trastuzumab",
+  "framework_vh": "EVQLVESGGGLVQPGGSLRLSCAASGFNIKDTYIHWVRQAPGKGLEWVARIYPTNGYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCSRWGGDGFYAMDYWGQGTLVTVSS",
+  "framework_vl": "DIQMTQSPSSLSASVGDRVTITCRASQDVNTAVAWYQQKPGKAPKLLIYSASFLYSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCQQHYTTPPTFGQGTKVEIK",
+  "linker": "GGGGSGGGGSGGGGS",
+  "car_format": "scFv-CD8a_hinge-CD8a_TM-4-1BB-CD3z",
+  "cdr_boundaries_chothia": {
+    "VH": {
+      "H1": [
+        26,
+        32
+      ],
+      "H2": [
+        52,
+        56
+      ],
+      "H3": [
+        95,
+        102
+      ]
+    },
+    "VL": {
+      "L1": [
+        24,
+        34
+      ],
+      "L2": [
+        50,
+        56
+      ],
+      "L3": [
+        89,
+        97
+      ]
+    }
+  }
+}
