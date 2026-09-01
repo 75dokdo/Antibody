@@ -93,3 +93,50 @@ python3 src/patent_seq_similarity.py query --fasta design/mpnn_output/top5_cdrs.
 
 ---
 *본 도구는 연구용 트리아지 보조 수단이며 법적 FTO 의견이 아닙니다.*
+
+---
+
+## 8. 대규모 다온도 설계 (1,000개)
+
+### 실행 설정
+
+| 온도 | 서열 수 | 특성 |
+|---|---|---|
+| 0.05 | 200 | 극보수적 (score 1.43–1.56) |
+| 0.10 | 200 | 보수적 (score 1.45–1.59) |
+| 0.20 | 200 | 중간 (score 1.47–1.72) |
+| 0.30 | 200 | 탐색적 (score 1.55–1.87) |
+| 0.50 | 200 | 창의적 (score 1.70–2.17) |
+
+### 필터링 결과
+
+| 단계 | 개수 |
+|---|---|
+| 생성 | 1,000개 |
+| 스코어 필터 (T≤0.3, 상위 300) | 300개 |
+| CDR-H3+L3 중복 제거 | 267개 |
+| 특허 MODERATE 제거 | 265개 |
+| **최종 실험 후보 (96-well 1판)** | **96개** |
+
+### 다양성
+
+- CDR-H3 유니크 서열: **785종 / 1,000개**
+- CDR-L3 유니크 서열: **765종 / 1,000개**
+
+### 최종 96개 온도별 구성
+
+- T=0.05: 72개 (보수적, 높은 신뢰도)
+- T=0.10: 23개 (중간)
+- T=0.20: 1개
+
+### 상위 5개 후보
+
+| 순위 | Score | CDR-H1 | CDR-H2 | CDR-H3 | CDR-L3 |
+|---|---|---|---|---|---|
+| 1 | 1.4311 | GFNIADTW | IKPADGTT | ATDLGPGFLGLEV | AGGGVSPIG |
+| 2 | 1.4412 | GFNIADTW | IKPADGTT | ATDLGSGFDGLAV | AGGGAEPIG |
+| 3 | 1.4453 | GFNIADTW | INPADGST | ATDLGPGFKGLAV | AGGGAEPIG |
+| 4 | 1.4457 | GFNIADTW | INPADQTT | AIDYGSSFKGLAY | LGAGKEPIG |
+| 5 | 1.4489 | GFNIADTW | IKPADGTT | ATDLGPGFLGLSV | AGGGAEPIG |
+
+**파일**: `results/gpc3_top96.fasta`, `results/gpc3_top96.json`
