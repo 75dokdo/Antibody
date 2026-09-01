@@ -81,7 +81,14 @@ except Exception as e:
     print(f'  → 건너뜀: {e}')
 "
 
-# 9. 유틸리티
+# 9. 면역원성 분석 (T 세포 에피토프)
+echo "[8/9] T 세포 에피토프 분석 (mhcflurry, epytope)..."
+pip install mhcflurry epytope
+# MHC-I 예측 모델 다운로드 (~2 GB, 시간 소요)
+echo "  MHC-I 모델 다운로드 중 (~2 GB)..."
+mhcflurry-downloads fetch || echo "  → 실패 시 나중에 'mhcflurry-downloads fetch' 재실행"
+
+# 10. 유틸리티
 echo "[9/9] 유틸리티 (numpy, scipy, pandas, matplotlib, jupyter)..."
 pip install "numpy<2.0" "scipy>=1.10" pandas matplotlib seaborn jupyter
 
