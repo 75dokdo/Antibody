@@ -1,0 +1,117 @@
+[
+  {
+    "rank": 1,
+    "id": "FAP-scFv-6446",
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSITSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARFKGSYYYYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSISTYISWYQQKPGKAPKLLIYFASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCQQSYSYPFTFGQGTKVEIK",
+    "meta": {
+      "id": "FAP-scFv-6446",
+      "score": 73.0,
+      "level": "GOOD (소규모 최적화)",
+      "flags": [
+        "CDR 소수성/양전하 패치 다수",
+        "용해도 위험 (CamSol < 0)"
+      ],
+      "pi": 9.36,
+      "gravy": -0.3,
+      "charge": 6.2,
+      "camSol": -0.083,
+      "humanness": "HIGH",
+      "cdr_h3": "ARFKGSYYYYYY",
+      "agg_risk": "HIGH",
+      "high_liab": 0
+    }
+  },
+  {
+    "rank": 2,
+    "id": "FAP-scFv-9112",
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSITSYYIHWVRQAPGKGLEWVARIIKYTSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARDYYSSGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFISWYQQKPGKAPKLLIYRASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCKQSYSYPYTFGQGTKVEIK",
+    "meta": {
+      "id": "FAP-scFv-9112",
+      "score": 68.0,
+      "level": "MODERATE (개선 필요)",
+      "flags": [
+        "CDR 소수성/양전하 패치 다수",
+        "용해도 위험 (CamSol < 0)"
+      ],
+      "pi": 9.53,
+      "gravy": -0.355,
+      "charge": 7.2,
+      "camSol": -0.063,
+      "humanness": "HIGH",
+      "cdr_h3": "ARDYYSSGYYY",
+      "agg_risk": "HIGH",
+      "high_liab": 0
+    }
+  },
+  {
+    "rank": 3,
+    "id": "FAP-scFv-0489",
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSISSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARKYGSYYYGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFISWYQQKPGKAPKLLIYRASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "meta": {
+      "id": "FAP-scFv-0489",
+      "score": 68.0,
+      "level": "MODERATE (개선 필요)",
+      "flags": [
+        "CDR 소수성/양전하 패치 다수",
+        "용해도 위험 (CamSol < 0)"
+      ],
+      "pi": 9.64,
+      "gravy": -0.353,
+      "charge": 8.2,
+      "camSol": -0.069,
+      "humanness": "HIGH",
+      "cdr_h3": "ARKYGSYYYGYYY",
+      "agg_risk": "HIGH",
+      "high_liab": 0
+    }
+  },
+  {
+    "rank": 4,
+    "id": "FAP-scFv-3867",
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYTISSYYIHWVRQAPGKGLEWVARIIYTYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARYYGSSGYFAYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFISWYQQKPGKAPKLLIYYASSRPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCKQSYSYPYTFGQGTKVEIK",
+    "meta": {
+      "id": "FAP-scFv-3867",
+      "score": 68.0,
+      "level": "MODERATE (개선 필요)",
+      "flags": [
+        "CDR 소수성/양전하 패치 다수",
+        "용해도 위험 (CamSol < 0)"
+      ],
+      "pi": 9.54,
+      "gravy": -0.305,
+      "charge": 7.2,
+      "camSol": -0.072,
+      "humanness": "HIGH",
+      "cdr_h3": "ARYYGSSGYFAY",
+      "agg_risk": "HIGH",
+      "high_liab": 0
+    }
+  },
+  {
+    "rank": 5,
+    "id": "FAP-scFv-15542",
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGFSITSYYIHWVRQAPGKGLEWVARIIKYTSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARSSYYGYYYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYYASSRPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCKQSYSYPYTFGQGTKVEIK",
+    "meta": {
+      "id": "FAP-scFv-15542",
+      "score": 68.0,
+      "level": "MODERATE (개선 필요)",
+      "flags": [
+        "CDR 소수성/양전하 패치 다수",
+        "용해도 위험 (CamSol < 0)"
+      ],
+      "pi": 9.64,
+      "gravy": -0.335,
+      "charge": 8.2,
+      "camSol": -0.072,
+      "humanness": "HIGH",
+      "cdr_h3": "ARSSYYGYYYYY",
+      "agg_risk": "HIGH",
+      "high_liab": 0
+    }
+  }
+]

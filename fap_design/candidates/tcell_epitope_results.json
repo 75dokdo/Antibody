@@ -1,0 +1,67 @@
+[
+  {
+    "id": "FAP-scFv-6446",
+    "cdr_h3": "ARFKGSYYYYYY",
+    "mhci_strong": 0,
+    "mhci_weak": 0,
+    "mhcii_strong": 0,
+    "mhcii_weak": 0,
+    "pass_mhci": true,
+    "pass_mhcii": true,
+    "passed": true,
+    "mhci_hits": [],
+    "mhcii_hits": []
+  },
+  {
+    "id": "FAP-scFv-9112",
+    "cdr_h3": "ARDYYSSGYYY",
+    "mhci_strong": 0,
+    "mhci_weak": 0,
+    "mhcii_strong": 0,
+    "mhcii_weak": 0,
+    "pass_mhci": true,
+    "pass_mhcii": true,
+    "passed": true,
+    "mhci_hits": [],
+    "mhcii_hits": []
+  },
+  {
+    "id": "FAP-scFv-0489",
+    "cdr_h3": "ARKYGSYYYGYYY",
+    "mhci_strong": 0,
+    "mhci_weak": 0,
+    "mhcii_strong": 0,
+    "mhcii_weak": 0,
+    "pass_mhci": true,
+    "pass_mhcii": true,
+    "passed": true,
+    "mhci_hits": [],
+    "mhcii_hits": []
+  },
+  {
+    "id": "FAP-scFv-3867",
+    "cdr_h3": "ARYYGSSGYFAY",
+    "mhci_strong": 0,
+    "mhci_weak": 0,
+    "mhcii_strong": 0,
+    "mhcii_weak": 0,
+    "pass_mhci": true,
+    "pass_mhcii": true,
+    "passed": true,
+    "mhci_hits": [],
+    "mhcii_hits": []
+  },
+  {
+    "id": "FAP-scFv-15542",
+    "cdr_h3": "ARSSYYGYYYYY",
+    "mhci_strong": 0,
+    "mhci_weak": 0,
+    "mhcii_strong": 0,
+    "mhcii_weak": 0,
+    "pass_mhci": true,
+    "pass_mhcii": true,
+    "passed": true,
+    "mhci_hits": [],
+    "mhcii_hits": []
+  }
+]
