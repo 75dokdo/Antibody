@@ -1,0 +1,67 @@
+{
+  "minimized_energy_kJ_mol": -787094,
+  "hotspot_contact_after_minimization": {
+    "n_hotspot_residues_found": 11,
+    "n_hotspot_residues_expected": 11,
+    "atoms_in_contact_05nm": 0,
+    "total_hotspot_atoms": 179,
+    "min_distance_A": 44.85,
+    "per_residue": [
+      {
+        "residue": "GLU(267)",
+        "min_dist_A": 44.8,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "LYS(270)",
+        "min_dist_A": 46.9,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "ARG(273)",
+        "min_dist_A": 53.4,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "GLU(274)",
+        "min_dist_A": 47.0,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "LEU(277)",
+        "min_dist_A": 52.8,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "LYS(372)",
+        "min_dist_A": 63.0,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "SER(373)",
+        "min_dist_A": 67.1,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "ILE(375)",
+        "min_dist_A": 58.0,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "SER(376)",
+        "min_dist_A": 61.8,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "SER(379)",
+        "min_dist_A": 56.3,
+        "contact_05nm": 0
+      },
+      {
+        "residue": "ALA(380)",
+        "min_dist_A": 58.5,
+        "contact_05nm": 0
+      }
+    ]
+  }
+}

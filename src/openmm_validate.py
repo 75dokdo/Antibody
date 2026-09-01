@@ -3,7 +3,7 @@
 Steps:
   1. PDBFixer: add missing residues/atoms, protonate at pH 7.4
   2. Amber14 force field + TIP3P water, periodic box
-  3. Energy minimisation (convergence < 10 kJ/mol/nm)
+  3. Restrained energy minimisation (Cα restraints, k=1000→10→0)
   4. NVT equilibration 100 ps (300 K)
   5. NpT production 500 ps (300 K, 1 bar)
   6. Analysis: RMSD, hotspot contacts, interaction energy estimate
@@ -21,6 +21,7 @@ from pathlib import Path
 
 import numpy as np
 from openmm import (
+    CustomExternalForce,
     LangevinMiddleIntegrator,
     MonteCarloBarostat,
     Platform,
@@ -89,9 +90,53 @@ def build_system(fixed_pdb: Path, padding: float = 1.0):
     return sim, modeller
 
 
-def minimize(sim: Simulation, tol: float = 10.0) -> float:
+def add_ca_restraints(sim: "Simulation", modeller: "Modeller",
+                      k_kj: float = 1000.0) -> "CustomExternalForce":
+    """Add harmonic Cα positional restraints to the system.
+
+    Restraint energy: E = k * [(x-x0)^2 + (y-y0)^2 + (z-z0)^2]
+    Returns the force object so k can be updated via setGlobalParameterDefaultValue.
+    """
+    restraint = CustomExternalForce(
+        "k_ca*((x-x0)^2+(y-y0)^2+(z-z0)^2)"
+    )
+    restraint.addGlobalParameter(
+        "k_ca", k_kj * unit.kilojoules_per_mole / unit.nanometers**2
+    )
+    restraint.addPerParticleParameter("x0")
+    restraint.addPerParticleParameter("y0")
+    restraint.addPerParticleParameter("z0")
+
+    positions = modeller.positions
+    n_ca = 0
+    for atom in modeller.topology.atoms():
+        # Restrain all Cα atoms in protein chains (not water/ions)
+        if atom.name == "CA" and atom.residue.name not in ("HOH", "WAT", "CL", "NA"):
+            x0, y0, z0 = positions[atom.index].value_in_unit(unit.nanometers)
+            restraint.addParticle(atom.index, [x0, y0, z0])
+            n_ca += 1
+
+    sim.system.addForce(restraint)
+    sim.context.reinitialize(preserveState=True)
+    print(f"  → Cα 구속 추가: {n_ca}개 원자, k={k_kj:.0f} kJ/mol/nm²")
+    return restraint
+
+
+def update_restraint_k(sim: "Simulation", restraint: "CustomExternalForce",
+                        k_kj: float) -> None:
+    """Update the restraint force constant without reinitializing."""
+    restraint.setGlobalParameterDefaultValue(
+        0, k_kj * unit.kilojoules_per_mole / unit.nanometers**2
+    )
+    sim.context.setParameter(
+        "k_ca", k_kj * unit.kilojoules_per_mole / unit.nanometers**2
+    )
+
+
+def minimize(sim: "Simulation", tol: float = 10.0, label: str = "") -> float:
     """Energy minimise; return final potential energy in kJ/mol."""
-    print("[최소화] 에너지 최소화 시작...")
+    tag = f"[최소화{' '+label if label else ''}]"
+    print(f"{tag} 에너지 최소화 시작...")
     t0 = time.time()
     state_before = sim.context.getState(getEnergy=True)
     e_before = state_before.getPotentialEnergy().value_in_unit(unit.kilojoules_per_mole)
@@ -103,7 +148,7 @@ def minimize(sim: Simulation, tol: float = 10.0) -> float:
     return e_after
 
 
-def run_md(sim: Simulation, out_dir: Path, steps: int,
+def run_md(sim: "Simulation", out_dir: Path, steps: int,
            report_interval: int = 100, label: str = "prod") -> None:
     """Run MD with reporters."""
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -125,28 +170,66 @@ def run_md(sim: Simulation, out_dir: Path, steps: int,
     print(f"  완료 [{time.time()-t0:.0f}s]")
 
 
-def analyse_contacts(sim: Simulation, topology, hotspot_mature: list[int],
+def _get_chain_roles(topology) -> dict:
+    """Return {'antigen': chain_id, 'antibody': [chain_ids]} by chain index.
+
+    OpenMM renumbers chains alphabetically after solvation (H→B, L→C).
+    We use chain ORDER: index-0=antigen(A), index-1=VH, index-2=VL.
+    Water/ion chains (residues named HOH/WAT/CL/NA) are excluded.
+    """
+    protein_chains = []
+    water_names = {"HOH", "WAT", "CL", "NA", "K", "MG", "CA"}
+    for chain in topology.chains():
+        res_names = {r.name for r in chain.residues()}
+        if res_names - water_names:  # has at least one non-water residue
+            protein_chains.append(chain.id)
+    # index-0 = antigen, index-1,2 = antibody chains
+    return {
+        "antigen": protein_chains[0] if protein_chains else None,
+        "antibody": protein_chains[1:] if len(protein_chains) > 1 else [],
+    }
+
+
+def analyse_contacts(sim: "Simulation", topology, hotspot_mature: list[int],
                      cutoff_nm: float = 0.5) -> dict:
-    """Count hotspot-antibody contacts in current frame."""
+    """Count hotspot-antibody contacts in current frame.
+
+    Robust to OpenMM chain renaming (H→B, L→C after solvation).
+    Hotspot residues are found by residue number in the antigen chain.
+    """
     state = sim.context.getState(getPositions=True)
     pos = np.array(state.getPositions().value_in_unit(unit.nanometers))
 
-    res_list = list(topology.residues())
-    # Map chain+resid → atom indices
+    roles = _get_chain_roles(topology)
+    ag_chain = roles["antigen"]
+    ab_chains = set(roles["antibody"])
+
     hotspot_atoms: list[int] = []
     ab_atoms: list[int] = []
+    ag_resids: list[int] = []
 
-    for res in res_list:
+    for res in topology.residues():
         chain_id = res.chain.id
         resid = int(res.id)
         atom_idxs = [a.index for a in res.atoms()]
-        if chain_id == "A" and resid in hotspot_mature:
-            hotspot_atoms.extend(atom_idxs)
-        elif chain_id in ("H", "L"):
+        if chain_id == ag_chain:
+            ag_resids.append(resid)
+            if resid in hotspot_mature:
+                hotspot_atoms.extend(atom_idxs)
+        elif chain_id in ab_chains:
             ab_atoms.extend(atom_idxs)
 
     if not hotspot_atoms or not ab_atoms:
-        return {"contacts": 0, "min_dist_nm": None}
+        chains_found = {r.chain.id for r in topology.residues()}
+        hotspot_set = set(hotspot_mature)
+        ag_set = set(ag_resids)
+        print(f"  [주의] hotspot 또는 항체 원자 미탐지.")
+        print(f"    발견 체인: {chains_found}")
+        print(f"    항원 체인({ag_chain}) 잔기 범위: "
+              f"{min(ag_resids) if ag_resids else '?'} – {max(ag_resids) if ag_resids else '?'}")
+        print(f"    HOTSPOT_MATURE 교집합: {hotspot_set & ag_set}")
+        print(f"    항체 체인: {ab_chains}")
+        return {"hotspot_contacts": 0, "total_hotspot_atoms": 0, "min_dist_nm": None}
 
     hot_pos = pos[hotspot_atoms]
     ab_pos = pos[ab_atoms]
@@ -156,6 +239,25 @@ def analyse_contacts(sim: Simulation, topology, hotspot_mature: list[int],
     return {"hotspot_contacts": contacts,
             "total_hotspot_atoms": len(hotspot_atoms),
             "min_dist_nm": round(min_d, 3)}
+
+
+def centroid_distance(sim: "Simulation", topology) -> float:
+    """Return centroid-to-centroid distance (nm) between antigen and antibody chains."""
+    state = sim.context.getState(getPositions=True)
+    pos = np.array(state.getPositions().value_in_unit(unit.nanometers))
+    roles = _get_chain_roles(topology)
+    ag_chain = roles["antigen"]
+    ab_chains = set(roles["antibody"])
+    ag, ab = [], []
+    for res in topology.residues():
+        idxs = [a.index for a in res.atoms()]
+        if res.chain.id == ag_chain:
+            ag.extend(idxs)
+        elif res.chain.id in ab_chains:
+            ab.extend(idxs)
+    if not ag or not ab:
+        return float("nan")
+    return float(np.linalg.norm(pos[ag].mean(0) - pos[ab].mean(0)))
 
 
 def main() -> None:
@@ -179,8 +281,18 @@ def main() -> None:
     # ── 2. 시스템 구축 ────────────────────────────────────────────────────
     sim, modeller = build_system(fixed, padding=1.0)
 
-    # ── 3. 에너지 최소화 ──────────────────────────────────────────────────
-    e_min = minimize(sim)
+    # ── 3. 단계적 구속 완화 최소화 ─────────────────────────────────────────
+    # LightDock rigid-body pose has severe clashes → restrain Cα atoms
+    # to prevent the complex from separating during minimization.
+    # k schedule: 1000 → 100 → 10 → 0 kJ/mol/nm²
+    print("\n[구속 최소화] Cα 구속 하에 단계적 에너지 최소화")
+    restraint = add_ca_restraints(sim, modeller, k_kj=1000.0)
+
+    e_min = None
+    for k_val in [1000.0, 100.0, 10.0, 0.0]:
+        update_restraint_k(sim, restraint, k_val)
+        print(f"\n  k = {k_val:.0f} kJ/mol/nm²")
+        e_min = minimize(sim, tol=10.0, label=f"k{int(k_val)}")
 
     # 최소화된 구조 저장
     min_pdb = args.out / "minimized.pdb"
@@ -189,11 +301,18 @@ def main() -> None:
         PDBFile.writeFile(modeller.topology, state.getPositions(), f)
     print(f"  최소화 구조: {min_pdb}")
 
+    # 복합체 분리 확인
+    d_cen = centroid_distance(sim, modeller.topology)
+    print(f"  항원-항체 무게중심 거리: {d_cen:.2f} nm")
+
     # 최소화 후 접촉 분석
     contacts_min = analyse_contacts(sim, modeller.topology, HOTSPOT_MATURE)
-    print(f"\n  Hotspot 접촉 (최소화 후): {contacts_min['hotspot_contacts']}/"
-          f"{contacts_min['total_hotspot_atoms']} atoms  "
-          f"최단거리 {contacts_min['min_dist_nm']:.3f} nm")
+    if contacts_min["min_dist_nm"] is not None:
+        print(f"\n  Hotspot 접촉 (최소화 후): {contacts_min['hotspot_contacts']}/"
+              f"{contacts_min['total_hotspot_atoms']} atoms  "
+              f"최단거리 {contacts_min['min_dist_nm']:.3f} nm")
+    else:
+        print(f"\n  Hotspot 접촉 (최소화 후): 체인 미탐지 (체인 재매핑 확인 필요)")
 
     # ── 4. NVT 평형화 ─────────────────────────────────────────────────────
     if args.equil > 0:
@@ -206,9 +325,12 @@ def main() -> None:
 
     # 최종 접촉 분석
     contacts_prod = analyse_contacts(sim, modeller.topology, HOTSPOT_MATURE)
-    print(f"\n  Hotspot 접촉 (MD 후): {contacts_prod['hotspot_contacts']}/"
-          f"{contacts_prod['total_hotspot_atoms']} atoms  "
-          f"최단거리 {contacts_prod['min_dist_nm']:.3f} nm")
+    if contacts_prod["min_dist_nm"] is not None:
+        print(f"\n  Hotspot 접촉 (MD 후): {contacts_prod['hotspot_contacts']}/"
+              f"{contacts_prod['total_hotspot_atoms']} atoms  "
+              f"최단거리 {contacts_prod['min_dist_nm']:.3f} nm")
+    else:
+        print(f"\n  Hotspot 접촉 (MD 후): 체인 미탐지")
 
     # 최종 구조 저장
     prod_pdb = args.out / "production.pdb"
@@ -221,7 +343,11 @@ def main() -> None:
     result = {
         "input_pdb": str(args.pdb),
         "forcefield": "Amber14sb + TIP3P",
-        "minimization": {"final_energy_kJ_mol": round(e_min, 1)},
+        "minimization": {
+            "final_energy_kJ_mol": round(e_min, 1) if e_min is not None else None,
+            "centroid_distance_nm": round(d_cen, 3),
+            "restraint_schedule_kJ_mol_nm2": [1000, 100, 10, 0],
+        },
         "equil_steps": args.equil,
         "prod_steps": args.steps,
         "prod_time_ps": round(args.steps * 0.002, 2),
@@ -232,10 +358,12 @@ def main() -> None:
 
     print("\n" + "="*60)
     print("OpenMM 검증 완료")
-    print(f"  에너지 최소화: {e_min:,.0f} kJ/mol")
+    print(f"  에너지 최소화: {e_min:,.0f} kJ/mol" if e_min else "  에너지 최소화: N/A")
+    print(f"  무게중심 거리: {d_cen:.2f} nm (복합체 {'유지' if d_cen < 3.0 else '분리됨!'})")
     print(f"  MD 시간:       {args.steps * 0.002:.2f} ps")
-    print(f"  Hotspot 접촉:  {contacts_prod['hotspot_contacts']} / "
-          f"{contacts_prod['total_hotspot_atoms']} (MD 후)")
+    if contacts_prod["min_dist_nm"] is not None:
+        print(f"  Hotspot 접촉:  {contacts_prod['hotspot_contacts']} / "
+              f"{contacts_prod['total_hotspot_atoms']} (MD 후)")
     print(f"  결과:          {args.out}/")
     print("="*60)
 
