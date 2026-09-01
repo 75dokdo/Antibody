@@ -252,11 +252,53 @@ def minimize(sim: "Simulation", tol: float = 10.0, label: str = "") -> float:
 
 
 def run_md(sim: "Simulation", out_dir: Path, steps: int,
-           report_interval: int = 100, label: str = "prod") -> None:
-    """Run MD with reporters."""
+           report_interval: int = 100, label: str = "prod",
+           protein_only_dcd: bool = True, dt_ps: float = 0.002) -> None:
+    """Run MD with reporters.
+
+    Args:
+        protein_only_dcd: DCD에 단백질 원자만 저장 (물/이온 제외).
+                          True면 용량 ~10× 절감.
+                          단, MDTraj PBC 이미지 보정 불가 → centroid 분석 제한.
+        dt_ps:            타임스텝 (ps), 파일 크기 추정에 사용.
+    """
+    from openmm.app import DCDReporter as _DCDReporter
+
     out_dir.mkdir(parents=True, exist_ok=True)
     sim.reporters.clear()
-    sim.reporters.append(DCDReporter(str(out_dir / f"{label}.dcd"), report_interval))
+
+    # 단백질 전용 DCD (물/이온 제외)
+    if protein_only_dcd:
+        prot_atoms = [
+            a.index for a in sim.topology.atoms()
+            if a.residue.name not in ("HOH", "WAT", "CL", "NA", "K", "MG")
+        ]
+        n_all  = sim.topology.getNumAtoms()
+        n_prot = len(prot_atoms)
+        frame_all_kb  = n_all  * 3 * 4 / 1024
+        frame_prot_kb = n_prot * 3 * 4 / 1024
+        n_frames_est  = steps // report_interval
+        saving_mb = (frame_all_kb - frame_prot_kb) * n_frames_est / 1024
+        print(f"  [DCD] 단백질 전용: {n_prot:,}/{n_all:,} 원자 "
+              f"({frame_prot_kb:.0f} vs {frame_all_kb:.0f} KB/frame, "
+              f"절감 ~{saving_mb:.0f} MB)")
+        dcd_reporter = _DCDReporter(
+            str(out_dir / f"{label}.dcd"),
+            report_interval,
+            atomSubset=prot_atoms,
+        )
+    else:
+        n_all = sim.topology.getNumAtoms()
+        n_frames_est = steps // report_interval
+        total_mb = n_all * 3 * 4 * n_frames_est / 1e6
+        print(f"  [DCD] 전체 시스템: {n_all:,} 원자  "
+              f"추정 용량 {total_mb:.0f} MB ({n_frames_est} frames)")
+        dcd_reporter = _DCDReporter(
+            str(out_dir / f"{label}.dcd"),
+            report_interval,
+        )
+
+    sim.reporters.append(dcd_reporter)
     sim.reporters.append(StateDataReporter(
         str(out_dir / f"{label}.csv"), report_interval,
         step=True, time=True, potentialEnergy=True,
@@ -267,7 +309,7 @@ def run_md(sim: "Simulation", out_dir: Path, steps: int,
         time=True, potentialEnergy=True, temperature=True, progress=True,
         remainingTime=True, totalSteps=steps, separator="\t",
     ))
-    print(f"\n[MD] {label} ({steps} steps = {steps*0.002:.1f} ps)")
+    print(f"\n[MD] {label} ({steps:,} steps = {steps * dt_ps:.1f} ps)")
     t0 = time.time()
     sim.step(steps)
     print(f"  완료 [{time.time()-t0:.0f}s]")
@@ -535,6 +577,10 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=RESULTS_DIR / "openmm")
     parser.add_argument("--analysis_only", action="store_true",
                         help="기존 DCD 재분석만 수행 (MD 건너뜀)")
+    parser.add_argument("--report_interval", type=int, default=500,
+                        help="DCD/CSV 저장 간격 (steps; 기본 500 = 1 ps마다 저장)")
+    parser.add_argument("--full_system_dcd", action="store_true",
+                        help="DCD에 물/이온 포함 전체 시스템 저장 (기본: 단백질만, 10× 절감)")
     args = parser.parse_args()
 
     args.out.mkdir(parents=True, exist_ok=True)
@@ -611,13 +657,18 @@ def main() -> None:
         print("\n  Hotspot 접촉 (최소화 후): 체인 미탐지 (체인 재매핑 확인 필요)")
 
     # ── 4. NVT 평형화 ─────────────────────────────────────────────────────
+    prot_only = not args.full_system_dcd
     if args.equil > 0:
         sim.context.setVelocitiesToTemperature(args.temp * unit.kelvin)
-        run_md(sim, args.out, args.equil, label="equil")
+        run_md(sim, args.out, args.equil, label="equil",
+               report_interval=args.report_interval,
+               protein_only_dcd=prot_only, dt_ps=dt_ps)
 
     # ── 5. NpT 생산 MD ────────────────────────────────────────────────────
     if args.steps > 0:
-        run_md(sim, args.out, args.steps, label="prod")
+        run_md(sim, args.out, args.steps, label="prod",
+               report_interval=args.report_interval,
+               protein_only_dcd=prot_only, dt_ps=dt_ps)
 
     # 최종 접촉 분석
     contacts_prod = analyse_contacts(sim, modeller.topology, hotspot_seq)
