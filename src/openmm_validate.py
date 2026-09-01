@@ -1,21 +1,32 @@
-"""OpenMM validation of docked antibody-GPC3 complex.
+"""OpenMM MD validation of docked antibody-GPC3 complex.
 
 Steps:
   1. PDBFixer: add missing residues/atoms, protonate at pH 7.4
-  2. Amber14 force field + TIP3P water, periodic box
-  3. Restrained energy minimisation (Cα restraints, k=1000→10→0)
-  4. NVT equilibration 100 ps (300 K)
-  5. NpT production 500 ps (300 K, 1 bar)
-  6. Analysis: RMSD, hotspot contacts, interaction energy estimate
+  2. Force field + water box + 0.15 M NaCl
+       ff14SB mode (기본): Amber14sb + TIP3P-FB
+       ff19SB mode:        Amber ff19SB + OPC (4-점, 권장)
+  3. Staged Cα-restrained energy minimisation (k = 1000 → 100 → 10 → 0 kJ/mol/nm²)
+  4. NVT equilibration (default 50,000 steps = 100 ps, 300 K)
+  5. NpT production MD (default 250,000 steps = 500 ps, 300 K, 1 bar)
+  6. MDTraj analysis: RMSD, RMSF, PBC-corrected centroid distance,
+     hotspot-contact time series, B-factor, radius of gyration
 
 Usage:
-    python3 src/openmm_validate.py
-    python3 src/openmm_validate.py --pdb design/docked_complex.pdb --steps 500
+    # ff14SB (빠른 검증)
+    python3 src/openmm_validate.py --pdb design/docked_complex.pdb
+
+    # ff19SB + OPC (정밀 MD)
+    python3 src/openmm_validate.py --pdb design/docked_complex.pdb \\
+        --ff ff19sb --equil 50000 --steps 250000
+
+    # 기존 DCD만 재분석
+    python3 src/openmm_validate.py --analysis_only --out results/openmm
 """
 from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
 from pathlib import Path
 
@@ -39,6 +50,24 @@ from openmm.app import (
     StateDataReporter,
 )
 from pdbfixer import PDBFixer
+
+# ── 포스필드 설정 ─────────────────────────────────────────────────────────────
+FF_CONFIGS = {
+    "ff14sb": {
+        "ff_files":    ["amber14-all.xml", "amber14/tip3pfb.xml"],
+        "water_model": "tip3p",
+        "cutoff_nm":   1.0,
+        "label":       "Amber14sb + TIP3P-FB",
+    },
+    "ff19sb": {
+        # ff19SB는 OPC 워터와 함께 설계됨 (Tian et al. 2020)
+        # OPC: 4-점 모델, 물 성질 최고 재현 (Izadi et al. 2014)
+        "ff_files":    ["amber/ff19SB.xml", "amber/opc.xml"],
+        "water_model": "opc",
+        "cutoff_nm":   0.9,   # OPC 권장 컷오프
+        "label":       "Amber ff19SB + OPC",
+    },
+}
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESULTS_DIR = REPO_ROOT / "results"
@@ -92,30 +121,74 @@ def fix_pdb(pdb_path: Path, out_path: Path, ph: float = 7.4) -> None:
           f"{set(r.chain.id for r in fixer.topology.residues())})")
 
 
-def build_system(fixed_pdb: Path, padding: float = 1.0):
-    """Solvate in TIP3P box, return (simulation, topology, modeller)."""
-    print("[OpenMM] 시스템 구축 (Amber14sb + TIP3P)")
+def build_system(fixed_pdb: Path, ff_key: str = "ff14sb",
+                 padding: float = 1.0, salt_molar: float = 0.15,
+                 temperature_K: float = 300.0, dt_fs: float = 2.0):
+    """Solvate, add 0.15 M NaCl, build OpenMM Simulation.
+
+    Args:
+        ff_key:      'ff14sb' or 'ff19sb'
+        padding:     Water box padding in nm
+        salt_molar:  NaCl concentration in mol/L (default 0.15 M physiological)
+        temperature_K: Simulation temperature
+        dt_fs:       Integration timestep in fs
+
+    Returns:
+        (simulation, modeller)
+    """
+    cfg = FF_CONFIGS.get(ff_key, FF_CONFIGS["ff14sb"])
+    print(f"[OpenMM] 시스템 구축 ({cfg['label']})")
     pdb = PDBFile(str(fixed_pdb))
-    ff = ForceField("amber14-all.xml", "amber14/tip3pfb.xml")
+    ff = ForceField(*cfg["ff_files"])
     modeller = Modeller(pdb.topology, pdb.positions)
-    modeller.addSolvent(ff, padding=padding * unit.nanometers, model="tip3p")
+    modeller.addSolvent(
+        ff,
+        padding=padding * unit.nanometers,
+        model=cfg["water_model"],
+        ionicStrength=salt_molar * unit.molar,   # 0.15 M NaCl 생리 농도
+        positiveIon="Na+",
+        negativeIon="Cl-",
+    )
     n_wat = sum(1 for r in modeller.topology.residues() if r.name == "HOH")
-    print(f"  → 물 분자 {n_wat:,}개 추가, 박스 크기 ~"
-          f"{modeller.topology.getPeriodicBoxVectors()[0][0].value_in_unit(unit.nanometers):.1f} nm")
+    box_nm = modeller.topology.getPeriodicBoxVectors()[0][0].value_in_unit(unit.nanometers)
+    print(f"  → 물 분자 {n_wat:,}개 / NaCl 0.15 M / 박스 ~{box_nm:.1f} nm")
+    print(f"  → 비결합 컷오프: {cfg['cutoff_nm']} nm")
 
     system = ff.createSystem(
         modeller.topology,
         nonbondedMethod=PME,
-        nonbondedCutoff=1.0 * unit.nanometers,
+        nonbondedCutoff=cfg["cutoff_nm"] * unit.nanometers,
         constraints=HBonds,
+        rigidWater=True,
+        ewaldErrorTolerance=5e-4,
     )
-    system.addForce(MonteCarloBarostat(1 * unit.bar, 300 * unit.kelvin))
+    # NpT: Monte Carlo barostat
+    system.addForce(MonteCarloBarostat(
+        1 * unit.bar, temperature_K * unit.kelvin
+    ))
 
     integrator = LangevinMiddleIntegrator(
-        300 * unit.kelvin, 1.0 / unit.picosecond, 0.002 * unit.picoseconds
+        temperature_K * unit.kelvin,
+        1.0 / unit.picosecond,
+        dt_fs * unit.femtoseconds,
     )
-    platform = Platform.getPlatformByName("CPU")
-    sim = Simulation(modeller.topology, system, integrator, platform)
+
+    # GPU 우선, 없으면 CPU
+    try:
+        platform = Platform.getPlatformByName("CUDA")
+        props = {"CudaPrecision": "mixed"}
+        sim = Simulation(modeller.topology, system, integrator, platform, props)
+        print("  → 플랫폼: CUDA (GPU)")
+    except Exception:
+        try:
+            platform = Platform.getPlatformByName("OpenCL")
+            sim = Simulation(modeller.topology, system, integrator, platform)
+            print("  → 플랫폼: OpenCL (GPU/Apple Metal)")
+        except Exception:
+            platform = Platform.getPlatformByName("CPU")
+            sim = Simulation(modeller.topology, system, integrator, platform)
+            print("  → 플랫폼: CPU")
+
     sim.context.setPositions(modeller.positions)
     return sim, modeller
 
@@ -290,23 +363,209 @@ def centroid_distance(sim: "Simulation", topology) -> float:
     return float(np.linalg.norm(pos[ag].mean(0) - pos[ab].mean(0)))
 
 
+def analyse_trajectory_mdtraj(out_dir: Path, topology_pdb: Path,
+                               hotspot_seq: list[int]) -> dict:
+    """
+    MDTraj로 DCD 궤적을 분석합니다.
+
+    분석 항목:
+      - 백본 RMSD (최소화 구조 기준)
+      - 잔기별 RMSF → B-factor 환산
+      - PBC 보정 무게중심 거리 (항원 vs 항체)
+      - 회전 반경 (Rg)
+      - Hotspot 접촉 수 시계열
+
+    Returns:
+        분석 결과 딕셔너리
+    """
+    try:
+        import mdtraj as md
+    except ImportError:
+        print("  [경고] MDTraj 미설치 — 궤적 분석 건너뜀. pip install mdtraj")
+        return {}
+
+    results: dict = {}
+
+    for label in ("equil", "prod"):
+        dcd = out_dir / f"{label}.dcd"
+        if not dcd.exists():
+            continue
+
+        print(f"\n[MDTraj] {label} 궤적 분석...")
+        try:
+            traj = md.load(str(dcd), top=str(topology_pdb))
+        except Exception as exc:
+            print(f"  로드 실패: {exc}")
+            continue
+
+        # PBC 이미지 보정 (unwrapping)
+        try:
+            traj.image_molecules(inplace=True)
+        except Exception:
+            pass
+
+        n_frames = traj.n_frames
+        print(f"  프레임: {n_frames}  원자: {traj.n_atoms}")
+
+        # ── 백본 RMSD (첫 프레임 기준) ───────────────────────────────────
+        try:
+            bb_idx = traj.topology.select("backbone and protein")
+            if len(bb_idx) > 0:
+                rmsd = md.rmsd(traj, traj, 0, atom_indices=bb_idx)
+                results[f"{label}_rmsd_nm"] = {
+                    "mean": float(rmsd.mean()),
+                    "max":  float(rmsd.max()),
+                    "final": float(rmsd[-1]),
+                    "per_frame": rmsd.tolist(),
+                }
+                print(f"  백본 RMSD: mean={rmsd.mean()*10:.2f} Å  "
+                      f"max={rmsd.max()*10:.2f} Å  final={rmsd[-1]*10:.2f} Å")
+        except Exception as exc:
+            print(f"  RMSD 계산 실패: {exc}")
+
+        # ── RMSF → B-factor ──────────────────────────────────────────────
+        try:
+            ca_idx = traj.topology.select("name CA and protein")
+            if len(ca_idx) > 0:
+                rmsf = md.rmsf(traj, traj, 0, atom_indices=ca_idx)
+                bfactor = (8 * np.pi**2 / 3) * (rmsf * 10)**2  # Å² → B-factor
+                results[f"{label}_rmsf"] = {
+                    "mean_A": float(rmsf.mean() * 10),
+                    "max_A":  float(rmsf.max() * 10),
+                    "per_ca_A": (rmsf * 10).tolist(),
+                    "bfactor_per_ca": bfactor.tolist(),
+                }
+                print(f"  Cα RMSF: mean={rmsf.mean()*10:.2f} Å  max={rmsf.max()*10:.2f} Å")
+        except Exception as exc:
+            print(f"  RMSF 계산 실패: {exc}")
+
+        # ── 무게중심 거리 (PBC 보정) ──────────────────────────────────────
+        try:
+            chains = list(traj.topology.chains)
+            protein_chains = [c for c in chains
+                              if any(r.name not in ("HOH", "WAT", "NA", "CL", "K")
+                                     for r in c.residues)]
+            if len(protein_chains) >= 2:
+                ag_atoms = [a.index for a in protein_chains[0].atoms]
+                ab_atoms = [a.index for r in protein_chains[1:]
+                            for a in r.atoms]
+                ag_centroid = traj.xyz[:, ag_atoms, :].mean(axis=1)
+                ab_centroid = traj.xyz[:, ab_atoms, :].mean(axis=1)
+                dist_nm = np.linalg.norm(ag_centroid - ab_centroid, axis=1)
+                results[f"{label}_centroid_dist_nm"] = {
+                    "mean":  float(dist_nm.mean()),
+                    "min":   float(dist_nm.min()),
+                    "final": float(dist_nm[-1]),
+                    "per_frame": dist_nm.tolist(),
+                }
+                print(f"  무게중심 거리: mean={dist_nm.mean():.2f} nm  "
+                      f"min={dist_nm.min():.2f} nm  final={dist_nm[-1]:.2f} nm")
+        except Exception as exc:
+            print(f"  무게중심 거리 계산 실패: {exc}")
+
+        # ── 회전 반경 ─────────────────────────────────────────────────────
+        try:
+            prot_idx = traj.topology.select("protein")
+            if len(prot_idx) > 0:
+                rg = md.compute_rg(traj.atom_slice(prot_idx))
+                results[f"{label}_rg_nm"] = {
+                    "mean": float(rg.mean()),
+                    "final": float(rg[-1]),
+                }
+                print(f"  회전 반경 Rg: mean={rg.mean()*10:.2f} Å  "
+                      f"final={rg[-1]*10:.2f} Å")
+        except Exception as exc:
+            print(f"  Rg 계산 실패: {exc}")
+
+        # ── Hotspot 접촉 시계열 ───────────────────────────────────────────
+        try:
+            chains_all = list(traj.topology.chains)
+            protein_only = [c for c in chains_all
+                            if any(r.name not in ("HOH", "WAT", "NA", "CL", "K")
+                                   for r in c.residues)]
+            if len(protein_only) >= 2:
+                ag_chain = protein_only[0]
+                ag_residues = list(ag_chain.residues)
+                hotspot_res_indices = [r.index for r in ag_residues
+                                       if (r.index + 1) in hotspot_seq]  # 0-based
+
+                if hotspot_res_indices:
+                    ab_res_indices = [r.index for c in protein_only[1:]
+                                      for r in c.residues]
+                    # 잔기 쌍 접촉 (cutoff 0.5 nm)
+                    contact_pairs = [(hr, ar)
+                                     for hr in hotspot_res_indices
+                                     for ar in ab_res_indices[:50]]  # 상위 50개 제한
+                    if contact_pairs:
+                        dists, _ = md.compute_contacts(
+                            traj, contact_pairs, scheme="closest-heavy"
+                        )
+                        n_contacts = (dists < 0.5).sum(axis=1)
+                        results[f"{label}_hotspot_contacts"] = {
+                            "mean": float(n_contacts.mean()),
+                            "min":  float(n_contacts.min()),
+                            "max":  float(n_contacts.max()),
+                            "per_frame": n_contacts.tolist(),
+                        }
+                        print(f"  Hotspot 접촉 수: mean={n_contacts.mean():.1f}  "
+                              f"min={n_contacts.min()}  max={n_contacts.max()}")
+        except Exception as exc:
+            print(f"  Hotspot 접촉 시계열 실패: {exc}")
+
+    return results
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--pdb", type=Path,
                         default=REPO_ROOT / "design" / "docked_complex.pdb")
-    parser.add_argument("--steps", type=int, default=500,
-                        help="NpT production steps (0.002 ps each; default 500 = 1 ps)")
-    parser.add_argument("--equil", type=int, default=500,
-                        help="NVT equilibration steps (default 500 = 1 ps)")
+    parser.add_argument("--ff", choices=["ff14sb", "ff19sb"], default="ff14sb",
+                        help="포스필드: ff14sb(기본, TIP3P) 또는 ff19sb(OPC, 정밀)")
+    parser.add_argument("--steps", type=int, default=250000,
+                        help="NpT 생산 MD 스텝 수 (0.002 ps; 기본 250000 = 500 ps)")
+    parser.add_argument("--equil", type=int, default=50000,
+                        help="NVT 평형화 스텝 수 (기본 50000 = 100 ps)")
+    parser.add_argument("--salt", type=float, default=0.15,
+                        help="NaCl 농도 mol/L (기본 0.15 M)")
+    parser.add_argument("--temp", type=float, default=300.0,
+                        help="온도 K (기본 300 K)")
+    parser.add_argument("--dt", type=float, default=2.0,
+                        help="타임스텝 fs (기본 2.0; HMR 적용 시 4.0 가능)")
     parser.add_argument("--out", type=Path, default=RESULTS_DIR / "openmm")
+    parser.add_argument("--analysis_only", action="store_true",
+                        help="기존 DCD 재분석만 수행 (MD 건너뜀)")
     args = parser.parse_args()
 
     args.out.mkdir(parents=True, exist_ok=True)
     fixed = args.out / "fixed.pdb"
 
+    cfg = FF_CONFIGS.get(args.ff, FF_CONFIGS["ff14sb"])
+    dt_ps = args.dt * 1e-3  # fs → ps
+
+    print("=" * 60)
+    print(f"포스필드: {cfg['label']}")
+    print(f"타임스텝: {args.dt:.1f} fs")
+    print(f"NVT 평형화: {args.equil} steps = {args.equil * dt_ps:.1f} ps")
+    print(f"NpT 생산 MD: {args.steps} steps = {args.steps * dt_ps:.1f} ps")
+    print(f"NaCl 농도: {args.salt} M  |  온도: {args.temp} K")
+    print("=" * 60)
+
+    # ── analysis_only 모드 ────────────────────────────────────────────────
+    if args.analysis_only:
+        topology_pdb = args.out / "minimized.pdb"
+        if not topology_pdb.exists():
+            topology_pdb = args.out / "fixed.pdb"
+        print(f"[재분석] 기존 DCD 궤적 분석 ({topology_pdb.name} 기준)")
+        hotspot_seq = list(range(1, 12))  # 대략적; 정확도 필요 시 --pdb 함께 사용
+        md_results = analyse_trajectory_mdtraj(args.out, topology_pdb, hotspot_seq)
+        with open(args.out / "md_analysis.json", "w") as f:
+            json.dump(md_results, f, indent=2)
+        print(f"분석 완료 → {args.out}/md_analysis.json")
+        return
+
     # ── 0. Hotspot 매핑 (PDBFixer 전에 원본 번호로부터 계산) ─────────────
-    print("[잔기 매핑] 원본 PDB에서 hotspot 순서 번호 계산...")
+    print("\n[잔기 매핑] 원본 PDB에서 hotspot 순서 번호 계산...")
     hotspot_seq = map_hotspots_to_sequential(args.pdb, HOTSPOT_MATURE)
     print(f"  Sequential IDs: {hotspot_seq}")
 
@@ -314,11 +573,13 @@ def main() -> None:
     fix_pdb(args.pdb, fixed)
 
     # ── 2. 시스템 구축 ────────────────────────────────────────────────────
-    sim, modeller = build_system(fixed, padding=1.0)
+    sim, modeller = build_system(
+        fixed, ff_key=args.ff, padding=1.0,
+        salt_molar=args.salt, temperature_K=args.temp, dt_fs=args.dt,
+    )
 
     # ── 3. 단계적 구속 완화 최소화 ─────────────────────────────────────────
-    # LightDock rigid-body pose has severe clashes → restrain Cα atoms
-    # to prevent the complex from separating during minimization.
+    # LightDock rigid-body pose has severe clashes → staged Cα restraints
     # k schedule: 1000 → 100 → 10 → 0 kJ/mol/nm²
     print("\n[구속 최소화] Cα 구속 하에 단계적 에너지 최소화")
     restraint = add_ca_restraints(sim, modeller, k_kj=1000.0)
@@ -347,11 +608,11 @@ def main() -> None:
               f"{contacts_min['total_hotspot_atoms']} atoms  "
               f"최단거리 {contacts_min['min_dist_nm']:.3f} nm")
     else:
-        print(f"\n  Hotspot 접촉 (최소화 후): 체인 미탐지 (체인 재매핑 확인 필요)")
+        print("\n  Hotspot 접촉 (최소화 후): 체인 미탐지 (체인 재매핑 확인 필요)")
 
     # ── 4. NVT 평형화 ─────────────────────────────────────────────────────
     if args.equil > 0:
-        sim.context.setVelocitiesToTemperature(300 * unit.kelvin)
+        sim.context.setVelocitiesToTemperature(args.temp * unit.kelvin)
         run_md(sim, args.out, args.equil, label="equil")
 
     # ── 5. NpT 생산 MD ────────────────────────────────────────────────────
@@ -365,7 +626,7 @@ def main() -> None:
               f"{contacts_prod['total_hotspot_atoms']} atoms  "
               f"최단거리 {contacts_prod['min_dist_nm']:.3f} nm")
     else:
-        print(f"\n  Hotspot 접촉 (MD 후): 체인 미탐지")
+        print("\n  Hotspot 접촉 (MD 후): 체인 미탐지")
 
     # 최종 구조 저장
     prod_pdb = args.out / "production.pdb"
@@ -374,33 +635,60 @@ def main() -> None:
         PDBFile.writeFile(modeller.topology, state.getPositions(), f)
     print(f"  생산 MD 구조: {prod_pdb}")
 
-    # ── 6. 결과 저장 ──────────────────────────────────────────────────────
+    # ── 6. MDTraj 궤적 분석 ───────────────────────────────────────────────
+    print("\n[MDTraj] 궤적 분석 시작...")
+    md_results = analyse_trajectory_mdtraj(args.out, min_pdb, hotspot_seq)
+    with open(args.out / "md_analysis.json", "w") as f:
+        json.dump(md_results, f, indent=2)
+
+    # ── 7. 결과 저장 ──────────────────────────────────────────────────────
     result = {
         "input_pdb": str(args.pdb),
-        "forcefield": "Amber14sb + TIP3P",
+        "forcefield": cfg["label"],
+        "ff_key": args.ff,
+        "water_model": cfg["water_model"],
+        "salt_M": args.salt,
+        "temperature_K": args.temp,
+        "timestep_fs": args.dt,
         "minimization": {
             "final_energy_kJ_mol": round(e_min, 1) if e_min is not None else None,
             "centroid_distance_nm": round(d_cen, 3),
             "restraint_schedule_kJ_mol_nm2": [1000, 100, 10, 0],
         },
         "equil_steps": args.equil,
+        "equil_time_ps": round(args.equil * dt_ps, 2),
         "prod_steps": args.steps,
-        "prod_time_ps": round(args.steps * 0.002, 2),
+        "prod_time_ps": round(args.steps * dt_ps, 2),
         "hotspot_contacts_after_min": contacts_min,
         "hotspot_contacts_after_md": contacts_prod,
+        "mdtraj_analysis": md_results,
     }
     (args.out / "validation_result.json").write_text(json.dumps(result, indent=2))
 
-    print("\n" + "="*60)
-    print("OpenMM 검증 완료")
+    # ── 8. 요약 출력 ──────────────────────────────────────────────────────
+    print("\n" + "=" * 60)
+    print("OpenMM MD 검증 완료")
+    print(f"  포스필드:      {cfg['label']}")
     print(f"  에너지 최소화: {e_min:,.0f} kJ/mol" if e_min else "  에너지 최소화: N/A")
-    print(f"  무게중심 거리: {d_cen:.2f} nm (복합체 {'유지' if d_cen < 3.0 else '분리됨!'})")
-    print(f"  MD 시간:       {args.steps * 0.002:.2f} ps")
+    print(f"  무게중심 거리: {d_cen:.2f} nm (복합체 {'유지 ✓' if d_cen < 3.0 else '분리됨!'})")
+    prod_t = args.steps * dt_ps
+    equil_t = args.equil * dt_ps
+    print(f"  MD 시간:       평형화 {equil_t:.0f} ps + 생산 {prod_t:.0f} ps")
     if contacts_prod["min_dist_nm"] is not None:
         print(f"  Hotspot 접촉:  {contacts_prod['hotspot_contacts']} / "
               f"{contacts_prod['total_hotspot_atoms']} (MD 후)")
+    # MDTraj 요약
+    rmsd_key = "prod_rmsd_nm"
+    if rmsd_key in md_results:
+        rmsd = md_results[rmsd_key]
+        print(f"  백본 RMSD:     mean={rmsd['mean']*10:.2f} Å  "
+              f"max={rmsd['max']*10:.2f} Å")
+    rmsf_key = "prod_rmsf"
+    if rmsf_key in md_results:
+        rmsf = md_results[rmsf_key]
+        print(f"  Cα RMSF:       mean={rmsf['mean_A']:.2f} Å  max={rmsf['max_A']:.2f} Å")
     print(f"  결과:          {args.out}/")
-    print("="*60)
+    print("=" * 60)
 
 
 if __name__ == "__main__":
