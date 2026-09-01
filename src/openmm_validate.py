@@ -45,6 +45,36 @@ RESULTS_DIR = REPO_ROOT / "results"
 
 HOTSPOT_MATURE = [267, 270, 273, 274, 277, 372, 373, 375, 376, 379, 380]
 
+
+def map_hotspots_to_sequential(pdb_path: Path,
+                                hotspot_mature: list[int]) -> list[int]:
+    """Convert mature-sequence residue numbers to sequential 1-based indices.
+
+    PDBFixer renumbers chain A residues from the original (gapped) mature
+    numbering to sequential 1-53. This function reads the ORIGINAL PDB to
+    build the mapping before renumbering occurs.
+    """
+    chain_a_resnums: list[int] = []
+    seen: set[int] = set()
+    with open(pdb_path) as f:
+        for line in f:
+            if line.startswith("ATOM") and line[21] == "A":
+                rn = int(line[22:26].strip())
+                if rn not in seen:
+                    chain_a_resnums.append(rn)
+                    seen.add(rn)
+    chain_a_resnums.sort()
+    hotspot_set = set(hotspot_mature)
+    seq_ids = [i for i, rn in enumerate(chain_a_resnums, start=1)
+               if rn in hotspot_set]
+    # Print mapping for diagnostics
+    print("  Hotspot 잔기 매핑 (mature → sequential):")
+    for i, rn in enumerate(chain_a_resnums, start=1):
+        if rn in hotspot_set:
+            print(f"    mature {rn} → seq {i}")
+    return seq_ids
+
+
 def fix_pdb(pdb_path: Path, out_path: Path, ph: float = 7.4) -> None:
     """Add missing atoms, protonate, write clean PDB."""
     print(f"[PDBFixer] 구조 보정: {pdb_path.name}")
@@ -275,6 +305,11 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     fixed = args.out / "fixed.pdb"
 
+    # ── 0. Hotspot 매핑 (PDBFixer 전에 원본 번호로부터 계산) ─────────────
+    print("[잔기 매핑] 원본 PDB에서 hotspot 순서 번호 계산...")
+    hotspot_seq = map_hotspots_to_sequential(args.pdb, HOTSPOT_MATURE)
+    print(f"  Sequential IDs: {hotspot_seq}")
+
     # ── 1. PDBFixer ──────────────────────────────────────────────────────
     fix_pdb(args.pdb, fixed)
 
@@ -306,7 +341,7 @@ def main() -> None:
     print(f"  항원-항체 무게중심 거리: {d_cen:.2f} nm")
 
     # 최소화 후 접촉 분석
-    contacts_min = analyse_contacts(sim, modeller.topology, HOTSPOT_MATURE)
+    contacts_min = analyse_contacts(sim, modeller.topology, hotspot_seq)
     if contacts_min["min_dist_nm"] is not None:
         print(f"\n  Hotspot 접촉 (최소화 후): {contacts_min['hotspot_contacts']}/"
               f"{contacts_min['total_hotspot_atoms']} atoms  "
@@ -324,7 +359,7 @@ def main() -> None:
         run_md(sim, args.out, args.steps, label="prod")
 
     # 최종 접촉 분석
-    contacts_prod = analyse_contacts(sim, modeller.topology, HOTSPOT_MATURE)
+    contacts_prod = analyse_contacts(sim, modeller.topology, hotspot_seq)
     if contacts_prod["min_dist_nm"] is not None:
         print(f"\n  Hotspot 접촉 (MD 후): {contacts_prod['hotspot_contacts']}/"
               f"{contacts_prod['total_hotspot_atoms']} atoms  "
