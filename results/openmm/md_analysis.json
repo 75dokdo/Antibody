@@ -1,0 +1,9 @@
+{
+  "rmsd_A": {
+    "gpc3": 0.40585803985595703,
+    "vh": 0.30908650159835815,
+    "vl": 0.4854414463043213
+  },
+  "hotspot_contacts_maintained": 0,
+  "hotspot_total": 11
+}
