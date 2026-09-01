@@ -26,9 +26,10 @@ conda create -n antibody python=3.11 -y 2>/dev/null || echo "  → 이미 존재
 eval "$(conda shell.bash hook)"
 conda activate antibody
 
-# 3. OpenMM (Metal GPU) + 구조 분석
-echo "[3/9] OpenMM (Metal GPU) + MDTraj + PDBFixer + MDAnalysis..."
-conda install -c conda-forge openmm pdbfixer mdtraj mdanalysis -y
+# 3. OpenMM (Metal GPU) + ff19SB/OPC 포함 + 구조 분석
+echo "[3/9] OpenMM (Metal GPU) + ff19SB/OPC + MDTraj + PDBFixer + MDAnalysis..."
+conda install -c conda-forge openmm openmmforcefields pdbfixer mdtraj mdanalysis -y
+# openmmforcefields: ff14SB, ff19SB, OPC, GAFF2 제공 (boltz 등과 pip 충돌 없음)
 
 # 4. PyTorch (MPS Metal 백엔드)
 # Apple Silicon arm64용 - CUDA 없이 MPS로 GPU 가속
@@ -93,8 +94,9 @@ import sys
 results = []
 
 checks = [
-    ("OpenMM",    "openmm"),
-    ("PDBFixer",  "pdbfixer"),
+    ("OpenMM",       "openmm"),
+    ("ff19SB/OPC",   "openmmforcefields"),
+    ("PDBFixer",     "pdbfixer"),
     ("MDTraj",    "mdtraj"),
     ("ESM-2",     "esm"),
     ("AbLang2",   "ablang2"),
