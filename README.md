@@ -23,6 +23,15 @@ UniProt = 성숙(PDB) + 24
 
 보정 없이 비교하면 24잔기가 어긋나 결론이 뒤집힙니다. 파이프라인에 내장되어 있습니다.
 
+## 이 시스템에서 가능한 도구
+
+GPU가 없고 HuggingFace/Zenodo/IPD가 차단된 환경입니다. 실행 검증을 마친 목록:
+**ProteinMPNN(CPU 서열 설계)**, **LightDock(restraint 도킹)**, **ANARCI**, BLAST+, sadie,
+OpenMM, Biopython. 불가: RFdiffusion, ABodyBuilder2, IgFold, AlphaFold.
+전체 감사: [`docs/system_capabilities.md`](docs/system_capabilities.md)
+
+> `abnumber`는 이 빌드에서 카파 경사슬 CDR이 한 잔기 어긋납니다. ANARCI를 직접 쓰십시오.
+
 ## 구성
 
 ```
@@ -34,16 +43,46 @@ src/
   gpc3_lib.py                번호 변환, 구조 로딩, SASA 계산
   epitope_fto_scan.py        좌표 기반 특허 충돌 스캔
   patent_seq_similarity.py   BLAST 기반 서열 유사도 검사
+  surface_patches.py         3D 표면 패치 클러스터링
+  scfv_design_prep.py        scFv 스캐폴드 + 도킹/설계 입력 생성
 results/
   epitope_selection_report.md   최종 리포트
-  fto_scan.json                 기계 판독용 전체 결과
+  fto_scan.json                 좌표 스캔 전체 결과
+  surface_patches.json          패치 분석 전체 결과
+design/
+  target_patch273.pdb           에피토프 집중 타겟
+  scfv_scaffold.fasta           허셉틴 프레임워크 scFv
+  design_spec.json              hotspot + CDR 설계 위치
+  run_design.sh                 GPU 장비용 실행 스크립트
+docs/
+  system_capabilities.md        도구 가용성 감사
 ```
+
+## 선정된 설계 타겟
+
+| 항목 | 값 |
+|---|---|
+| 에피토프 패치 | 중심 성숙 273 (UniProt 297) |
+| Hotspot 잔기 | 성숙 267,270,273,274,277,372,373,375,376,379,380 |
+| 패치 크기 | 11잔기, 785 Å² (파라토프 범위) |
+| 모델 신뢰도 | 평균 pLDDT **93.5** |
+| 특허 충돌 | 없음 |
+| 프레임워크 | trastuzumab (hu4D5) VH-(G4S)3-VL, 242 aa |
 
 ## 설치
 
 ```bash
-apt-get install -y ncbi-blast+     # BLAST+ 2.12.0
-pip3 install biopython             # 1.88
+apt-get install -y ncbi-blast+ hmmer
+pip3 install biopython sadie-antibody freesasa prody pdb-tools openmm lightdock
+pip3 install "pdbfixer @ git+https://github.com/openmm/pdbfixer.git"
+
+# ANARCI: the oxpig build does not ship germlines.py and fails to build a
+# wheel here; microANARCI is a self-contained pip-installable equivalent.
+pip3 install git+https://github.com/arogozhnikov/microANARCI.git
+
+# ProteinMPNN carries its weights in the repo, so it works behind the
+# egress policy that blocks HuggingFace and Zenodo.
+git clone --depth 1 https://github.com/dauparas/ProteinMPNN.git
 ```
 
 ## 사용법

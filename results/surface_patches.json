@@ -1,0 +1,731 @@
+[
+  {
+    "region": "GPC3_regionA",
+    "n_exposed_seeds": 54,
+    "n_candidate_patches": 54,
+    "patches": [
+      {
+        "centre": 136,
+        "members": [
+          130,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          141
+        ],
+        "stats": {
+          "n_residues": 8,
+          "sasa": 652.5,
+          "mean_plddt": 87.0,
+          "hydropathy": 0.05,
+          "n_charged": 2,
+          "composition": "LLGSDIND"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          130,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          141
+        ],
+        "outside_region": [],
+        "uniprot": [
+          154,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          165
+        ]
+      },
+      {
+        "centre": 37,
+        "members": [
+          33,
+          34,
+          36,
+          37,
+          39,
+          42,
+          43,
+          51,
+          52,
+          55
+        ],
+        "stats": {
+          "n_residues": 10,
+          "sasa": 852.9,
+          "mean_plddt": 85.8,
+          "hydropathy": -1.49,
+          "n_charged": 4,
+          "composition": "VPSDQLPRKE"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          33,
+          34,
+          36,
+          37,
+          39,
+          42,
+          43,
+          51,
+          52,
+          55
+        ],
+        "outside_region": [],
+        "uniprot": [
+          57,
+          58,
+          60,
+          61,
+          63,
+          66,
+          67,
+          75,
+          76,
+          79
+        ]
+      },
+      {
+        "centre": 52,
+        "members": [
+          22,
+          25,
+          26,
+          27,
+          37,
+          51,
+          52,
+          55,
+          56,
+          58,
+          59
+        ],
+        "stats": {
+          "n_residues": 11,
+          "sasa": 884.9,
+          "mean_plddt": 80.2,
+          "hydropathy": -2.14,
+          "n_charged": 6,
+          "composition": "QLKWDRKEKQL"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          25,
+          26,
+          27,
+          37,
+          51,
+          52,
+          55,
+          56,
+          58,
+          59
+        ],
+        "outside_region": [
+          22
+        ],
+        "uniprot": [
+          46,
+          49,
+          50,
+          51,
+          61,
+          75,
+          76,
+          79,
+          80,
+          82,
+          83
+        ]
+      }
+    ]
+  },
+  {
+    "region": "GPC3_regionB",
+    "n_exposed_seeds": 31,
+    "n_candidate_patches": 31,
+    "patches": [
+      {
+        "centre": 289,
+        "members": [
+          190,
+          193,
+          196,
+          197,
+          200,
+          288,
+          289,
+          294,
+          298,
+          452,
+          455,
+          458
+        ],
+        "stats": {
+          "n_residues": 12,
+          "sasa": 746.5,
+          "mean_plddt": 82.5,
+          "hydropathy": -1.1,
+          "n_charged": 3,
+          "composition": "LTSKQRINGMPR"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          190,
+          193,
+          196,
+          197,
+          200,
+          288,
+          289,
+          294,
+          298
+        ],
+        "outside_region": [
+          452,
+          455,
+          458
+        ],
+        "uniprot": [
+          214,
+          217,
+          220,
+          221,
+          224,
+          312,
+          313,
+          318,
+          322,
+          476,
+          479,
+          482
+        ]
+      },
+      {
+        "centre": 273,
+        "members": [
+          267,
+          270,
+          273,
+          274,
+          277,
+          372,
+          373,
+          375,
+          376,
+          379,
+          380
+        ],
+        "stats": {
+          "n_residues": 11,
+          "sasa": 785.3,
+          "mean_plddt": 93.5,
+          "hydropathy": -1.05,
+          "n_charged": 5,
+          "composition": "EKRELKSISSA"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          267,
+          270,
+          273,
+          274,
+          277
+        ],
+        "outside_region": [
+          372,
+          373,
+          375,
+          376,
+          379,
+          380
+        ],
+        "uniprot": [
+          291,
+          294,
+          297,
+          298,
+          301,
+          396,
+          397,
+          399,
+          400,
+          403,
+          404
+        ]
+      },
+      {
+        "centre": 217,
+        "members": [
+          70,
+          74,
+          77,
+          78,
+          81,
+          210,
+          214,
+          217,
+          218,
+          221,
+          434
+        ],
+        "stats": {
+          "n_residues": 11,
+          "sasa": 773.4,
+          "mean_plddt": 87.3,
+          "hydropathy": -0.76,
+          "n_charged": 2,
+          "composition": "QMKFINENTHV"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          210,
+          214,
+          217,
+          218,
+          221
+        ],
+        "outside_region": [
+          70,
+          74,
+          77,
+          78,
+          81,
+          434
+        ],
+        "uniprot": [
+          94,
+          98,
+          101,
+          102,
+          105,
+          234,
+          238,
+          241,
+          242,
+          245,
+          458
+        ]
+      }
+    ]
+  },
+  {
+    "region": "GPC3_regionC",
+    "n_exposed_seeds": 41,
+    "n_candidate_patches": 41,
+    "patches": [
+      {
+        "centre": 373,
+        "members": [
+          75,
+          273,
+          366,
+          369,
+          370,
+          372,
+          373,
+          375,
+          376,
+          380
+        ],
+        "stats": {
+          "n_residues": 10,
+          "sasa": 783.0,
+          "mean_plddt": 93.9,
+          "hydropathy": -1.81,
+          "n_charged": 5,
+          "composition": "EREQKKSISA"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          366,
+          369,
+          370,
+          372,
+          373,
+          375,
+          376,
+          380
+        ],
+        "outside_region": [
+          75,
+          273
+        ],
+        "uniprot": [
+          99,
+          297,
+          390,
+          393,
+          394,
+          396,
+          397,
+          399,
+          400,
+          404
+        ]
+      },
+      {
+        "centre": 323,
+        "members": [
+          315,
+          316,
+          318,
+          319,
+          320,
+          322,
+          323,
+          324,
+          326
+        ],
+        "stats": {
+          "n_residues": 9,
+          "sasa": 785.3,
+          "mean_plddt": 77.9,
+          "hydropathy": -0.57,
+          "n_charged": 2,
+          "composition": "GKTTTGKLA"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          320,
+          322,
+          323,
+          324,
+          326
+        ],
+        "outside_region": [
+          315,
+          316,
+          318,
+          319
+        ],
+        "uniprot": [
+          339,
+          340,
+          342,
+          343,
+          344,
+          346,
+          347,
+          348,
+          350
+        ]
+      },
+      {
+        "centre": 365,
+        "members": [
+          280,
+          284,
+          358,
+          365,
+          366,
+          369,
+          370,
+          372,
+          465,
+          466,
+          467
+        ],
+        "stats": {
+          "n_residues": 11,
+          "sasa": 902.5,
+          "mean_plddt": 76.7,
+          "hydropathy": -3.66,
+          "n_charged": 9,
+          "composition": "ENEREQKKDEE"
+        },
+        "collisions": {},
+        "verdict": "USABLE",
+        "in_region": [
+          358,
+          365,
+          366,
+          369,
+          370,
+          372
+        ],
+        "outside_region": [
+          280,
+          284,
+          465,
+          466,
+          467
+        ],
+        "uniprot": [
+          304,
+          308,
+          382,
+          389,
+          390,
+          393,
+          394,
+          396,
+          489,
+          490,
+          491
+        ]
+      }
+    ]
+  },
+  {
+    "region": "GPC3_regionD",
+    "n_exposed_seeds": 34,
+    "n_candidate_patches": 34,
+    "patches": [
+      {
+        "centre": 474,
+        "members": [
+          463,
+          467,
+          472,
+          473,
+          474,
+          476,
+          477,
+          479,
+          480,
+          482,
+          491
+        ],
+        "stats": {
+          "n_residues": 11,
+          "sasa": 771.8,
+          "mean_plddt": 45.7,
+          "hydropathy": -1.98,
+          "n_charged": 7,
+          "composition": "NEGDCDDDEIK"
+        },
+        "collisions": {
+          "YP7": [
+            515
+          ],
+          "HS20": [
+            496,
+            497,
+            498,
+            500,
+            501,
+            503,
+            504,
+            506
+          ],
+          "1G12": [
+            515
+          ],
+          "GC199": [
+            515
+          ]
+        },
+        "verdict": "COLLIDES",
+        "in_region": [
+          463,
+          467,
+          472,
+          473,
+          474,
+          476,
+          477,
+          479,
+          480,
+          482,
+          491
+        ],
+        "outside_region": [],
+        "uniprot": [
+          487,
+          491,
+          496,
+          497,
+          498,
+          500,
+          501,
+          503,
+          504,
+          506,
+          515
+        ]
+      },
+      {
+        "centre": 510,
+        "members": [
+          108,
+          348,
+          480,
+          482,
+          487,
+          488,
+          491,
+          508,
+          509,
+          510,
+          511,
+          512,
+          513
+        ],
+        "stats": {
+          "n_residues": 13,
+          "sasa": 940.6,
+          "mean_plddt": 49.4,
+          "hydropathy": -0.7,
+          "n_charged": 5,
+          "composition": "NVEIDGKVDDAPG"
+        },
+        "collisions": {
+          "GC33": [
+            532,
+            533,
+            534,
+            535,
+            536,
+            537
+          ],
+          "YP7": [
+            511,
+            512,
+            515,
+            532,
+            533,
+            534,
+            535,
+            536,
+            537
+          ],
+          "HS20": [
+            504,
+            506
+          ],
+          "1G12": [
+            511,
+            512,
+            515,
+            532,
+            533,
+            534,
+            535,
+            536,
+            537
+          ],
+          "GC199": [
+            511,
+            512,
+            515,
+            532,
+            533,
+            534,
+            535,
+            536,
+            537
+          ]
+        },
+        "verdict": "COLLIDES",
+        "in_region": [
+          480,
+          482,
+          487,
+          488,
+          491,
+          508,
+          509,
+          510,
+          511,
+          512,
+          513
+        ],
+        "outside_region": [
+          108,
+          348
+        ],
+        "uniprot": [
+          132,
+          372,
+          504,
+          506,
+          511,
+          512,
+          515,
+          532,
+          533,
+          534,
+          535,
+          536,
+          537
+        ]
+      },
+      {
+        "centre": 466,
+        "members": [
+          284,
+          365,
+          461,
+          462,
+          463,
+          465,
+          466,
+          467,
+          472,
+          476
+        ],
+        "stats": {
+          "n_residues": 10,
+          "sasa": 823.2,
+          "mean_plddt": 54.5,
+          "hydropathy": -3.33,
+          "n_charged": 7,
+          "composition": "NRDKNDEEGD"
+        },
+        "collisions": {
+          "HS20": [
+            496,
+            500
+          ]
+        },
+        "verdict": "COLLIDES",
+        "in_region": [
+          461,
+          462,
+          463,
+          465,
+          466,
+          467,
+          472,
+          476
+        ],
+        "outside_region": [
+          284,
+          365
+        ],
+        "uniprot": [
+          308,
+          389,
+          485,
+          486,
+          487,
+          489,
+          490,
+          491,
+          496,
+          500
+        ]
+      }
+    ]
+  }
+]
