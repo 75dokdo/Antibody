@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-02",
+  "query_h3": "ARDYYSSGYYY",
+  "references": {
+    "sibrotuzumab": "ARDYYGYYDGFDY",
+    "FAP5": "ARDRGSYGYYAMDY",
+    "28H1": "ARQYGNWFDP",
+    "4B9": "ARDRGSYGYYDMDY",
+    "MO36(추정)": "ARDYYDSGFAY"
+  },
+  "result": {
+    "ARDYYSSGYYY": {
+      "MO36": 72.7,
+      "sibrotuzumab": 42.3,
+      "FAP5": 42.9,
+      "28H1": 18.2,
+      "4B9": 42.9,
+      "pass": false
+    }
+  },
+  "h3_matrix": {
+    "H3-A ARYYGSSGYFAY": {
+      "max_id": 58.3,
+      "pass": true
+    },
+    "H3-B ARFKGSYYYYYY": {
+      "max_id": 46.4,
+      "pass": true
+    },
+    "H3-C ARDYYSSGYYY": {
+      "max_id": 72.7,
+      "pass": false
+    },
+    "H3-D ARKYGSYYYGYYY": {
+      "max_id": 53.8,
+      "pass": true
+    },
+    "H3-E ARSSYYGYYYYY": {
+      "max_id": 42.3,
+      "pass": true
+    }
+  },
+  "recommended_fix": {
+    "modified_h3": "AREYKSSGYYY",
+    "changes": "D3E + Y5K",
+    "MO36_id": 54.5,
+    "pass": true,
+    "note": "ESM-2 재채점 필요 (M5 Pro). MO36 서열은 추정치 — 실제 특허 DB 검증 권장"
+  }
+}
