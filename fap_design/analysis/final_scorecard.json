@@ -1,0 +1,57 @@
+[
+  {
+    "id": "FAP-scFv-1536",
+    "esm2_score": 13.0,
+    "complementarity_score": 20.0,
+    "dev_score_w": 10.9,
+    "immunogen_score": 0,
+    "patent_score": 12,
+    "pi_score": 8,
+    "camSol_score": 3,
+    "total": 66.9
+  },
+  {
+    "id": "FAP-scFv-12534",
+    "esm2_score": 14.2,
+    "complementarity_score": 16.0,
+    "dev_score_w": 10.9,
+    "immunogen_score": 0,
+    "patent_score": 12,
+    "pi_score": 8,
+    "camSol_score": 3,
+    "total": 64.1
+  },
+  {
+    "id": "FAP-scFv-6446",
+    "esm2_score": 13.0,
+    "complementarity_score": 16.0,
+    "dev_score_w": 10.9,
+    "immunogen_score": 0,
+    "patent_score": 12,
+    "pi_score": 8,
+    "camSol_score": 3,
+    "total": 62.9
+  },
+  {
+    "id": "FAP-scFv-13034",
+    "esm2_score": 12.6,
+    "complementarity_score": 16.0,
+    "dev_score_w": 10.9,
+    "immunogen_score": 0,
+    "patent_score": 12,
+    "pi_score": 8,
+    "camSol_score": 3,
+    "total": 62.5
+  },
+  {
+    "id": "FAP-scFv-4766",
+    "esm2_score": 13.0,
+    "complementarity_score": 16.0,
+    "dev_score_w": 10.2,
+    "immunogen_score": 0,
+    "patent_score": 12,
+    "pi_score": 5,
+    "camSol_score": 3,
+    "total": 59.2
+  }
+]

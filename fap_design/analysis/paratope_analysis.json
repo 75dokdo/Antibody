@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "FAP-scFv-12534",
+    "cdr_profiles": {
+      "H1": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.429
+      },
+      "H2": {
+        "len": 5,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 2,
+        "n_arom": 1,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.4
+      },
+      "H3": {
+        "len": 12,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 5,
+        "n_arom": 5,
+        "n_polar": 2,
+        "net_charge": 1,
+        "frac_hydro": 0.417
+      },
+      "L1": {
+        "len": 11,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 1,
+        "n_polar": 6,
+        "net_charge": 1,
+        "frac_hydro": 0.273
+      },
+      "L2": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 1,
+        "n_arom": 1,
+        "n_polar": 4,
+        "net_charge": 0,
+        "frac_hydro": 0.143
+      },
+      "L3": {
+        "len": 9,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 3,
+        "n_polar": 4,
+        "net_charge": 1,
+        "frac_hydro": 0.333
+      }
+    },
+    "complementarity": {
+      "score": 8.0,
+      "max": 10.0,
+      "notes": [
+        "H3 K/R/H×1 ↔ E311/D313 ⚠️",
+        "H3 극성×2 ↔ R356/K360 ~중립",
+        "H3 방향족×5 ↔ F358 ✅✅",
+        "H3 길이 12aa (최적 11-13) ✅",
+        "L3 방향족×3 (보조 접촉) ✅"
+      ],
+      "grade": "A"
+    },
+    "mhc2_cdr": {
+      "H1": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "CAASGFSITSYYIHW",
+            "pos": 0,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AASGFSITSYYIHWV",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H2": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "WVARIPISSYSYTRY",
+            "pos": 0,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VARIPISSYSYTRYA",
+            "pos": 1,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H3": {
+        "context_len": 23,
+        "hits": [
+          {
+            "peptide": "TAVYYCARYYGSSGY",
+            "pos": 0,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AVYYCARYYGSSGYF",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VYYCARYYGSSGYFA",
+            "pos": 2,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YYCARYYGSSGYFAY",
+            "pos": 3,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YCARYYGSSGYFAYW",
+            "pos": 4,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "CARYYGSSGYFAYWG",
+            "pos": 5,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "ARYYGSSGYFAYWGQ",
+            "pos": 6,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "RYYGSSGYFAYWGQG",
+            "pos": 7,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YYGSSGYFAYWGQGT",
+            "pos": 8,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 4,
+        "n_mod": 5,
+        "risk": "HIGH"
+      },
+      "L1": {
+        "context_len": 11,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L2": {
+        "context_len": 7,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L3": {
+        "context_len": 9,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      }
+    },
+    "mhc2_cdr_overall": "HIGH",
+    "instability_index": 14.31,
+    "gravy": -0.263,
+    "esm2_pll": -0.2779,
+    "dev_score": 73.0,
+    "pI": 9.21,
+    "camSol": -0.079,
+    "humanness": "HIGH",
+    "patent_sim": 54.5
+  },
+  {
+    "id": "FAP-scFv-13034",
+    "cdr_profiles": {
+      "H1": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.429
+      },
+      "H2": {
+        "len": 5,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 2,
+        "n_arom": 1,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.4
+      },
+      "H3": {
+        "len": 12,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 7,
+        "n_arom": 7,
+        "n_polar": 2,
+        "net_charge": 1,
+        "frac_hydro": 0.583
+      },
+      "L1": {
+        "len": 11,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 1,
+        "n_polar": 6,
+        "net_charge": 1,
+        "frac_hydro": 0.273
+      },
+      "L2": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 1,
+        "n_arom": 1,
+        "n_polar": 4,
+        "net_charge": 0,
+        "frac_hydro": 0.143
+      },
+      "L3": {
+        "len": 9,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 3,
+        "n_polar": 4,
+        "net_charge": 1,
+        "frac_hydro": 0.333
+      }
+    },
+    "complementarity": {
+      "score": 8.0,
+      "max": 10.0,
+      "notes": [
+        "H3 K/R/H×1 ↔ E311/D313 ⚠️",
+        "H3 극성×2 ↔ R356/K360 ~중립",
+        "H3 방향족×7 ↔ F358 ✅✅",
+        "H3 길이 12aa (최적 11-13) ✅",
+        "L3 방향족×3 (보조 접촉) ✅"
+      ],
+      "grade": "A"
+    },
+    "mhc2_cdr": {
+      "H1": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "CAASGFSITSYYIHW",
+            "pos": 0,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AASGFSITSYYIHWV",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H2": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "WVARIPISSYSYTRY",
+            "pos": 0,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VARIPISSYSYTRYA",
+            "pos": 1,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H3": {
+        "context_len": 23,
+        "hits": [
+          {
+            "peptide": "TAVYYCARSSYYGYY",
+            "pos": 0,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AVYYCARSSYYGYYY",
+            "pos": 1,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VYYCARSSYYGYYYY",
+            "pos": 2,
+            "hydrophobic_count": 9,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YYCARSSYYGYYYYY",
+            "pos": 3,
+            "hydrophobic_count": 9,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YCARSSYYGYYYYYW",
+            "pos": 4,
+            "hydrophobic_count": 9,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "CARSSYYGYYYYYWG",
+            "pos": 5,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "ARSSYYGYYYYYWGQ",
+            "pos": 6,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "RSSYYGYYYYYWGQG",
+            "pos": 7,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "SSYYGYYYYYWGQGT",
+            "pos": 8,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 9,
+        "n_mod": 0,
+        "risk": "HIGH"
+      },
+      "L1": {
+        "context_len": 11,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L2": {
+        "context_len": 7,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L3": {
+        "context_len": 9,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      }
+    },
+    "mhc2_cdr_overall": "HIGH",
+    "instability_index": 16.5,
+    "gravy": -0.299,
+    "esm2_pll": -0.2787,
+    "dev_score": 73.0,
+    "pI": 9.28,
+    "camSol": -0.08,
+    "humanness": "HIGH",
+    "patent_sim": 50.0
+  },
+  {
+    "id": "FAP-scFv-6446",
+    "cdr_profiles": {
+      "H1": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.429
+      },
+      "H2": {
+        "len": 5,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 2,
+        "n_arom": 1,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.4
+      },
+      "H3": {
+        "len": 12,
+        "n_pos": 2,
+        "n_neg": 0,
+        "n_hydro": 7,
+        "n_arom": 7,
+        "n_polar": 1,
+        "net_charge": 2,
+        "frac_hydro": 0.583
+      },
+      "L1": {
+        "len": 11,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 1,
+        "n_polar": 6,
+        "net_charge": 1,
+        "frac_hydro": 0.273
+      },
+      "L2": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 2,
+        "n_arom": 2,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.286
+      },
+      "L3": {
+        "len": 9,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 3,
+        "n_polar": 5,
+        "net_charge": 0,
+        "frac_hydro": 0.333
+      }
+    },
+    "complementarity": {
+      "score": 8.0,
+      "max": 10.0,
+      "notes": [
+        "H3 K/R/H×2 ↔ E311/D313 ✅",
+        "H3 음전하/극성 부족 → R356/K360 반발 가능 ❌",
+        "H3 방향족×7 ↔ F358 ✅✅",
+        "H3 길이 12aa (최적 11-13) ✅",
+        "L3 방향족×3 (보조 접촉) ✅"
+      ],
+      "grade": "A"
+    },
+    "mhc2_cdr": {
+      "H1": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "CAASGYSITSYYIHW",
+            "pos": 0,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AASGYSITSYYIHWV",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H2": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "WVARIPISSYSYTRY",
+            "pos": 0,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VARIPISSYSYTRYA",
+            "pos": 1,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H3": {
+        "context_len": 23,
+        "hits": [
+          {
+            "peptide": "TAVYYCARFKGSYYY",
+            "pos": 0,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AVYYCARFKGSYYYY",
+            "pos": 1,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VYYCARFKGSYYYYY",
+            "pos": 2,
+            "hydrophobic_count": 9,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YYCARFKGSYYYYYY",
+            "pos": 3,
+            "hydrophobic_count": 9,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YCARFKGSYYYYYYW",
+            "pos": 4,
+            "hydrophobic_count": 9,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "CARFKGSYYYYYYWG",
+            "pos": 5,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "ARFKGSYYYYYYWGQ",
+            "pos": 6,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "RFKGSYYYYYYWGQG",
+            "pos": 7,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "FKGSYYYYYYWGQGT",
+            "pos": 8,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 9,
+        "n_mod": 0,
+        "risk": "HIGH"
+      },
+      "L1": {
+        "context_len": 11,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L2": {
+        "context_len": 7,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L3": {
+        "context_len": 9,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      }
+    },
+    "mhc2_cdr_overall": "HIGH",
+    "instability_index": 16.5,
+    "gravy": -0.288,
+    "esm2_pll": null,
+    "dev_score": 73.0,
+    "pI": 9.36,
+    "camSol": -0.083,
+    "humanness": "HIGH",
+    "patent_sim": 50.0
+  },
+  {
+    "id": "FAP-scFv-1536",
+    "cdr_profiles": {
+      "H1": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.429
+      },
+      "H2": {
+        "len": 5,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 2,
+        "net_charge": 0,
+        "frac_hydro": 0.6
+      },
+      "H3": {
+        "len": 11,
+        "n_pos": 2,
+        "n_neg": 1,
+        "n_hydro": 4,
+        "n_arom": 4,
+        "n_polar": 2,
+        "net_charge": 1,
+        "frac_hydro": 0.364
+      },
+      "L1": {
+        "len": 11,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 1,
+        "n_polar": 6,
+        "net_charge": 1,
+        "frac_hydro": 0.273
+      },
+      "L2": {
+        "len": 7,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 1,
+        "n_arom": 1,
+        "n_polar": 3,
+        "net_charge": 1,
+        "frac_hydro": 0.143
+      },
+      "L3": {
+        "len": 9,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 3,
+        "n_polar": 5,
+        "net_charge": 0,
+        "frac_hydro": 0.333
+      }
+    },
+    "complementarity": {
+      "score": 10.0,
+      "max": 10.0,
+      "notes": [
+        "H3 K/R/H×2 ↔ E311/D313 ✅",
+        "H3 D/E×1 ↔ R356/K360 ✅",
+        "H3 방향족×4 ↔ F358 ✅✅",
+        "H3 길이 11aa (최적 11-13) ✅",
+        "L3 방향족×3 (보조 접촉) ✅"
+      ],
+      "grade": "A"
+    },
+    "mhc2_cdr": {
+      "H1": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "CAASGYSISSYYIHW",
+            "pos": 0,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AASGYSISSYYIHWV",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H2": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "WVARIPIFSYSYTRY",
+            "pos": 0,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VARIPIFSYSYTRYA",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 2,
+        "n_mod": 0,
+        "risk": "HIGH"
+      },
+      "H3": {
+        "context_len": 22,
+        "hits": [
+          {
+            "peptide": "TAVYYCAREYKSSGY",
+            "pos": 0,
+            "hydrophobic_count": 5,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AVYYCAREYKSSGYY",
+            "pos": 1,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VYYCAREYKSSGYYY",
+            "pos": 2,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YYCAREYKSSGYYYW",
+            "pos": 3,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YCAREYKSSGYYYWG",
+            "pos": 4,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "CAREYKSSGYYYWGQ",
+            "pos": 5,
+            "hydrophobic_count": 5,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AREYKSSGYYYWGQG",
+            "pos": 6,
+            "hydrophobic_count": 5,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "REYKSSGYYYWGQGT",
+            "pos": 7,
+            "hydrophobic_count": 5,
+            "risk": "MOD",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 2,
+        "n_mod": 6,
+        "risk": "HIGH"
+      },
+      "L1": {
+        "context_len": 11,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L2": {
+        "context_len": 7,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L3": {
+        "context_len": 9,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      }
+    },
+    "mhc2_cdr_overall": "HIGH",
+    "instability_index": 16.49,
+    "gravy": -0.312,
+    "esm2_pll": null,
+    "dev_score": 73.0,
+    "pI": 9.41,
+    "camSol": -0.066,
+    "humanness": "HIGH",
+    "patent_sim": 54.5
+  },
+  {
+    "id": "FAP-scFv-4766",
+    "cdr_profiles": {
+      "H1": {
+        "len": 7,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 3,
+        "net_charge": 0,
+        "frac_hydro": 0.429
+      },
+      "H2": {
+        "len": 5,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 2,
+        "n_polar": 2,
+        "net_charge": 0,
+        "frac_hydro": 0.6
+      },
+      "H3": {
+        "len": 13,
+        "n_pos": 2,
+        "n_neg": 0,
+        "n_hydro": 7,
+        "n_arom": 7,
+        "n_polar": 1,
+        "net_charge": 2,
+        "frac_hydro": 0.538
+      },
+      "L1": {
+        "len": 11,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 1,
+        "n_polar": 6,
+        "net_charge": 1,
+        "frac_hydro": 0.273
+      },
+      "L2": {
+        "len": 7,
+        "n_pos": 1,
+        "n_neg": 0,
+        "n_hydro": 1,
+        "n_arom": 1,
+        "n_polar": 3,
+        "net_charge": 1,
+        "frac_hydro": 0.143
+      },
+      "L3": {
+        "len": 9,
+        "n_pos": 0,
+        "n_neg": 0,
+        "n_hydro": 3,
+        "n_arom": 3,
+        "n_polar": 5,
+        "net_charge": 0,
+        "frac_hydro": 0.333
+      }
+    },
+    "complementarity": {
+      "score": 8.0,
+      "max": 10.0,
+      "notes": [
+        "H3 K/R/H×2 ↔ E311/D313 ✅",
+        "H3 음전하/극성 부족 → R356/K360 반발 가능 ❌",
+        "H3 방향족×7 ↔ F358 ✅✅",
+        "H3 길이 13aa (최적 11-13) ✅",
+        "L3 방향족×3 (보조 접촉) ✅"
+      ],
+      "grade": "A"
+    },
+    "mhc2_cdr": {
+      "H1": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "CAASGYTISSYYIHW",
+            "pos": 0,
+            "hydrophobic_count": 6,
+            "risk": "MOD",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AASGYTISSYYIHWV",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 1,
+        "n_mod": 1,
+        "risk": "MOD"
+      },
+      "H2": {
+        "context_len": 16,
+        "hits": [
+          {
+            "peptide": "WVARIPIFSYSYTRY",
+            "pos": 0,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VARIPIFSYSYTRYA",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 2,
+        "n_mod": 0,
+        "risk": "HIGH"
+      },
+      "H3": {
+        "context_len": 24,
+        "hits": [
+          {
+            "peptide": "TAVYYCARKYGSYYY",
+            "pos": 0,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "AVYYCARKYGSYYYG",
+            "pos": 1,
+            "hydrophobic_count": 7,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "VYYCARKYGSYYYGY",
+            "pos": 2,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YYCARKYGSYYYGYY",
+            "pos": 3,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YCARKYGSYYYGYYY",
+            "pos": 4,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "CARKYGSYYYGYYYW",
+            "pos": 5,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "ARKYGSYYYGYYYWG",
+            "pos": 6,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "RKYGSYYYGYYYWGQ",
+            "pos": 7,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "KYGSYYYGYYYWGQG",
+            "pos": 8,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          },
+          {
+            "peptide": "YGSYYYGYYYWGQGT",
+            "pos": 9,
+            "hydrophobic_count": 8,
+            "risk": "HIGH",
+            "in_cdr": true
+          }
+        ],
+        "n_high": 10,
+        "n_mod": 0,
+        "risk": "HIGH"
+      },
+      "L1": {
+        "context_len": 11,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L2": {
+        "context_len": 7,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      },
+      "L3": {
+        "context_len": 9,
+        "hits": [],
+        "n_high": 0,
+        "n_mod": 0,
+        "risk": "LOW"
+      }
+    },
+    "mhc2_cdr_overall": "HIGH",
+    "instability_index": 15.72,
+    "gravy": -0.326,
+    "esm2_pll": null,
+    "dev_score": 68.0,
+    "pI": 9.51,
+    "camSol": -0.078,
+    "humanness": "HIGH",
+    "patent_sim": 50.0
+  }
+]
