@@ -1,0 +1,184 @@
+{
+  "method": "sequence-based \u0394G estimation (PRODIGY-like empirical)",
+  "temperature_K": 310.15,
+  "RT_kcal_mol": 0.6165,
+  "uncertainty_kcal_mol": 2.0,
+  "reference": [
+    "Vangone & Bonvin (2015) eLife - PRODIGY coefficients",
+    "Burley & Petsko (1985) - aromatic stacking -1.5 to -3.0 kcal/mol",
+    "Horovitz & Fersht (1992) - ion pair -0.5 to -2.5 kcal/mol"
+  ],
+  "results": [
+    {
+      "id": "FAP-scFv-1536_H3-C",
+      "name": "1536",
+      "delta_G_kcal_mol": -16.17,
+      "delta_G_components": {
+        "base": -8.5,
+        "electrostatic": -3.5,
+        "hydrophobic": -4.17,
+        "entropy_penalty": 0.0,
+        "esm2_correction": -0.006
+      },
+      "Kd_nM": 0.0,
+      "Kd_95CI_nM": [
+        0.0,
+        0.1
+      ],
+      "Kd_human": "4.0 pM",
+      "notes": {
+        "electrostatic": [
+          "H3 has 2\u00d7pos \u2192 E311/D313: -2.0",
+          "H3 1\u00d7neg \u2192 R356/K360: -1.5"
+        ],
+        "hydrophobic": [
+          "H3 4\u00d7arom \u2192 F358 stacking: -3.0",
+          "L3 3\u00d7arom: -1.0",
+          "GRAVY\u00d70.3 = -0.17"
+        ],
+        "entropy": [
+          "H3 length 11: +0.00 kcal/mol entropy penalty"
+        ],
+        "esm2": [
+          "ESM-2 PLL=-0.3112: -0.006 kcal/mol"
+        ]
+      }
+    },
+    {
+      "id": "FAP-scFv-4766_H3-D",
+      "name": "4766",
+      "delta_G_kcal_mol": -14.7,
+      "delta_G_components": {
+        "base": -8.5,
+        "electrostatic": -2.0,
+        "hydrophobic": -4.18,
+        "entropy_penalty": 0.0,
+        "esm2_correction": -0.022
+      },
+      "Kd_nM": 0.04,
+      "Kd_95CI_nM": [
+        0.0,
+        1.12
+      ],
+      "Kd_human": "43.8 pM",
+      "notes": {
+        "electrostatic": [
+          "H3 has 2\u00d7pos \u2192 E311/D313: -2.0"
+        ],
+        "hydrophobic": [
+          "H3 7\u00d7arom \u2192 F358 stacking: -3.0",
+          "L3 3\u00d7arom: -1.0",
+          "GRAVY\u00d70.3 = -0.18"
+        ],
+        "entropy": [
+          "H3 length 13: +0.00 kcal/mol entropy penalty"
+        ],
+        "esm2": [
+          "ESM-2 PLL=-0.3445: -0.022 kcal/mol"
+        ]
+      }
+    },
+    {
+      "id": "FAP-scFv-6446_H3-B",
+      "name": "6446",
+      "delta_G_kcal_mol": -14.65,
+      "delta_G_components": {
+        "base": -8.5,
+        "electrostatic": -2.0,
+        "hydrophobic": -4.14,
+        "entropy_penalty": 0.0,
+        "esm2_correction": -0.01
+      },
+      "Kd_nM": 0.05,
+      "Kd_95CI_nM": [
+        0.0,
+        1.23
+      ],
+      "Kd_human": "48.0 pM",
+      "notes": {
+        "electrostatic": [
+          "H3 has 2\u00d7pos \u2192 E311/D313: -2.0"
+        ],
+        "hydrophobic": [
+          "H3 7\u00d7arom \u2192 F358 stacking: -3.0",
+          "L3 3\u00d7arom: -1.0",
+          "GRAVY\u00d70.3 = -0.14"
+        ],
+        "entropy": [
+          "H3 length 12: +0.00 kcal/mol entropy penalty"
+        ],
+        "esm2": [
+          "ESM-2 PLL=-0.3198: -0.010 kcal/mol"
+        ]
+      }
+    },
+    {
+      "id": "FAP-scFv-13034_H3-E",
+      "name": "13034",
+      "delta_G_kcal_mol": -13.85,
+      "delta_G_components": {
+        "base": -8.5,
+        "electrostatic": -1.2,
+        "hydrophobic": -4.15,
+        "entropy_penalty": 0.0,
+        "esm2_correction": -0.003
+      },
+      "Kd_nM": 0.17,
+      "Kd_95CI_nM": [
+        0.01,
+        4.47
+      ],
+      "Kd_human": "174.4 pM",
+      "notes": {
+        "electrostatic": [
+          "H3 has 1\u00d7pos \u2192 E311/D313: -1.2"
+        ],
+        "hydrophobic": [
+          "H3 7\u00d7arom \u2192 F358 stacking: -3.0",
+          "L3 3\u00d7arom: -1.0",
+          "GRAVY\u00d70.3 = -0.15"
+        ],
+        "entropy": [
+          "H3 length 12: +0.00 kcal/mol entropy penalty"
+        ],
+        "esm2": [
+          "ESM-2 PLL=-0.3051: -0.003 kcal/mol"
+        ]
+      }
+    },
+    {
+      "id": "FAP-scFv-12534_H3-A",
+      "name": "12534",
+      "delta_G_kcal_mol": -13.79,
+      "delta_G_components": {
+        "base": -8.5,
+        "electrostatic": -1.2,
+        "hydrophobic": -4.11,
+        "entropy_penalty": 0.0,
+        "esm2_correction": 0.011
+      },
+      "Kd_nM": 0.19,
+      "Kd_95CI_nM": [
+        0.01,
+        4.91
+      ],
+      "Kd_human": "191.5 pM",
+      "notes": {
+        "electrostatic": [
+          "H3 has 1\u00d7pos \u2192 E311/D313: -1.2"
+        ],
+        "hydrophobic": [
+          "H3 5\u00d7arom \u2192 F358 stacking: -3.0",
+          "L3 3\u00d7arom: -1.0",
+          "GRAVY\u00d70.3 = -0.11"
+        ],
+        "entropy": [
+          "H3 length 12: +0.00 kcal/mol entropy penalty"
+        ],
+        "esm2": [
+          "ESM-2 PLL=-0.2779: +0.011 kcal/mol"
+        ]
+      }
+    }
+  ]
+}
