@@ -1,0 +1,18 @@
+{
+  "fap_ecd_len": 367,
+  "fap_ecd_source": "1Z68_chain_A_51-390",
+  "blade67_residues": "308-361",
+  "epitope_key_residues": [
+    "E311",
+    "D313",
+    "R356",
+    "K360",
+    "F358"
+  ],
+  "scfv_count": 5,
+  "num_recycles": 3,
+  "model_type": "alphafold2_multimer_v3",
+  "iptm_cutoff": 0.5,
+  "batch_fasta": "fap_design/colabfold/top5_FAP_complex_batch.fasta",
+  "run_script": "fap_design/colabfold/run_colabfold.sh"
+}
