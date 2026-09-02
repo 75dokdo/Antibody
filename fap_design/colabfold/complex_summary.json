@@ -1,0 +1,42 @@
+[
+  {
+    "id": "FAP-scFv-12534",
+    "best_pdb": null,
+    "blade67_contacts": 0,
+    "blade67_contacted": false,
+    "key_contacts": {},
+    "pass_iptm": false
+  },
+  {
+    "id": "FAP-scFv-13034",
+    "best_pdb": null,
+    "blade67_contacts": 0,
+    "blade67_contacted": false,
+    "key_contacts": {},
+    "pass_iptm": false
+  },
+  {
+    "id": "FAP-scFv-6446",
+    "best_pdb": null,
+    "blade67_contacts": 0,
+    "blade67_contacted": false,
+    "key_contacts": {},
+    "pass_iptm": false
+  },
+  {
+    "id": "FAP-scFv-1536",
+    "best_pdb": null,
+    "blade67_contacts": 0,
+    "blade67_contacted": false,
+    "key_contacts": {},
+    "pass_iptm": false
+  },
+  {
+    "id": "FAP-scFv-4766",
+    "best_pdb": null,
+    "blade67_contacts": 0,
+    "blade67_contacted": false,
+    "key_contacts": {},
+    "pass_iptm": false
+  }
+]
