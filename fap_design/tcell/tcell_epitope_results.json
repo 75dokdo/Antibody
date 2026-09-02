@@ -1,0 +1,3473 @@
+[
+  {
+    "id": "FAP-scFv-12534",
+    "cdrs": {
+      "H1": "GFSITSY",
+      "H2": "ISSYS",
+      "H3": "ARYYGSSGYFAY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "mhc1_hits": [],
+    "mhc1_n_hits": null,
+    "mhc1_risk": "N/A (MHCflurry not available)",
+    "mhc2_heuristic_hits": [
+      {
+        "peptide": "EVQLVESGGGLVQPG",
+        "pos": 0,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VQLVESGGGLVQPGG",
+        "pos": 1,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LVESGGGLVQPGGSL",
+        "pos": 3,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRLSCAASGFSITSY",
+        "pos": 17,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RLSCAASGFSITSYY",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSCAASGFSITSYYI",
+        "pos": 19,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SCAASGFSITSYYIH",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CAASGFSITSYYIHW",
+        "pos": 21,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AASGFSITSYYIHWV",
+        "pos": 22,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ASGFSITSYYIHWVR",
+        "pos": 23,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SGFSITSYYIHWVRQ",
+        "pos": 24,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GFSITSYYIHWVRQA",
+        "pos": 25,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "FSITSYYIHWVRQAP",
+        "pos": 26,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SITSYYIHWVRQAPG",
+        "pos": 27,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITSYYIHWVRQAPGK",
+        "pos": 28,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TSYYIHWVRQAPGKG",
+        "pos": 29,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYYIHWVRQAPGKGL",
+        "pos": 30,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYIHWVRQAPGKGLE",
+        "pos": 31,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YIHWVRQAPGKGLEW",
+        "pos": 32,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IHWVRQAPGKGLEWV",
+        "pos": 33,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "HWVRQAPGKGLEWVA",
+        "pos": 34,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WVRQAPGKGLEWVAR",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VRQAPGKGLEWVARI",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RQAPGKGLEWVARII",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QAPGKGLEWVARIIS",
+        "pos": 38,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APGKGLEWVARIISS",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKGLEWVARIISSY",
+        "pos": 40,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKGLEWVARIISSYS",
+        "pos": 41,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KGLEWVARIISSYSY",
+        "pos": 42,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GLEWVARIISSYSYT",
+        "pos": 43,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LEWVARIISSYSYTR",
+        "pos": 44,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "EWVARIISSYSYTRY",
+        "pos": 45,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "WVARIISSYSYTRYA",
+        "pos": 46,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VARIISSYSYTRYAD",
+        "pos": 47,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ARIISSYSYTRYADS",
+        "pos": 48,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RIISSYSYTRYADSV",
+        "pos": 49,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IISSYSYTRYADSVK",
+        "pos": 50,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSYSYTRYADSVKG",
+        "pos": 51,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYTRYADSVKGRF",
+        "pos": 53,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYTRYADSVKGRFT",
+        "pos": 54,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYTRYADSVKGRFTI",
+        "pos": 55,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YTRYADSVKGRFTIS",
+        "pos": 56,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AYLQMNSLRAEDTAV",
+        "pos": 78,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YLQMNSLRAEDTAVY",
+        "pos": 79,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQMNSLRAEDTAVYY",
+        "pos": 80,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QMNSLRAEDTAVYYC",
+        "pos": 81,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "MNSLRAEDTAVYYCA",
+        "pos": 82,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SLRAEDTAVYYCARY",
+        "pos": 84,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRAEDTAVYYCARYY",
+        "pos": 85,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RAEDTAVYYCARYYG",
+        "pos": 86,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AEDTAVYYCARYYGS",
+        "pos": 87,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDTAVYYCARYYGSS",
+        "pos": 88,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DTAVYYCARYYGSSG",
+        "pos": 89,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TAVYYCARYYGSSGY",
+        "pos": 90,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AVYYCARYYGSSGYF",
+        "pos": 91,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VYYCARYYGSSGYFA",
+        "pos": 92,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYCARYYGSSGYFAY",
+        "pos": 93,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YCARYYGSSGYFAYW",
+        "pos": 94,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "CARYYGSSGYFAYWG",
+        "pos": 95,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ARYYGSSGYFAYWGQ",
+        "pos": 96,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RYYGSSGYFAYWGQG",
+        "pos": 97,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYGSSGYFAYWGQGT",
+        "pos": 98,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YGSSGYFAYWGQGTL",
+        "pos": 99,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GSSGYFAYWGQGTLV",
+        "pos": 100,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SSGYFAYWGQGTLVT",
+        "pos": 101,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SGYFAYWGQGTLVTV",
+        "pos": 102,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYFAYWGQGTLVTVS",
+        "pos": 103,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YFAYWGQGTLVTVSS",
+        "pos": 104,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VTITCRASQSVSTFL",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITCRASQSVSTFLSW",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TCRASQSVSTFLSWY",
+        "pos": 21,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CRASQSVSTFLSWYQ",
+        "pos": 22,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RASQSVSTFLSWYQQ",
+        "pos": 23,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ASQSVSTFLSWYQQK",
+        "pos": 24,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SQSVSTFLSWYQQKP",
+        "pos": 25,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSVSTFLSWYQQKPG",
+        "pos": 26,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SVSTFLSWYQQKPGK",
+        "pos": 27,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VSTFLSWYQQKPGKA",
+        "pos": 28,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FLSWYQQKPGKAPKL",
+        "pos": 31,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSWYQQKPGKAPKLL",
+        "pos": 32,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SWYQQKPGKAPKLLI",
+        "pos": 33,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WYQQKPGKAPKLLIY",
+        "pos": 34,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YQQKPGKAPKLLIYS",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKAPKLLIYSASSY",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKAPKLLIYSASSYP",
+        "pos": 40,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KAPKLLIYSASSYPS",
+        "pos": 41,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APKLLIYSASSYPSG",
+        "pos": 42,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PKLLIYSASSYPSGV",
+        "pos": 43,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KLLIYSASSYPSGVP",
+        "pos": 44,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LLIYSASSYPSGVPS",
+        "pos": 45,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LIYSASSYPSGVPSR",
+        "pos": 46,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IYSASSYPSGVPSRF",
+        "pos": 47,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TDFTLTISSLQPEDF",
+        "pos": 68,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFTLTISSLQPEDFA",
+        "pos": 69,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FTLTISSLQPEDFAT",
+        "pos": 70,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TLTISSLQPEDFATY",
+        "pos": 71,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LTISSLQPEDFATYY",
+        "pos": 72,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TISSLQPEDFATYYC",
+        "pos": 73,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSLQPEDFATYYCR",
+        "pos": 74,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQPEDFATYYCRQSY",
+        "pos": 77,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PEDFATYYCRQSYSY",
+        "pos": 79,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDFATYYCRQSYSYP",
+        "pos": 80,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFATYYCRQSYSYPY",
+        "pos": 81,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FATYYCRQSYSYPYT",
+        "pos": 82,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ATYYCRQSYSYPYTF",
+        "pos": 83,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TYYCRQSYSYPYTFG",
+        "pos": 84,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYCRQSYSYPYTFGQ",
+        "pos": 85,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YCRQSYSYPYTFGQG",
+        "pos": 86,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSYSYPYTFGQGTKV",
+        "pos": 89,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYPYTFGQGTKVE",
+        "pos": 90,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYPYTFGQGTKVEI",
+        "pos": 91,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYPYTFGQGTKVEIK",
+        "pos": 92,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      }
+    ],
+    "mhc2_n_hits": 112,
+    "mhc2_risk": "HIGH",
+    "cdr_mhc2": {
+      "H1": [],
+      "H2": [],
+      "H3": [],
+      "L1": [],
+      "L2": [],
+      "L3": []
+    },
+    "overall_risk": "HIGH"
+  },
+  {
+    "id": "FAP-scFv-13034",
+    "cdrs": {
+      "H1": "GFSITSY",
+      "H2": "ISSYS",
+      "H3": "ARSSYYGYYYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "mhc1_hits": [],
+    "mhc1_n_hits": null,
+    "mhc1_risk": "N/A (MHCflurry not available)",
+    "mhc2_heuristic_hits": [
+      {
+        "peptide": "EVQLVESGGGLVQPG",
+        "pos": 0,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VQLVESGGGLVQPGG",
+        "pos": 1,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LVESGGGLVQPGGSL",
+        "pos": 3,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRLSCAASGFSITSY",
+        "pos": 17,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RLSCAASGFSITSYY",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSCAASGFSITSYYI",
+        "pos": 19,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SCAASGFSITSYYIH",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CAASGFSITSYYIHW",
+        "pos": 21,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AASGFSITSYYIHWV",
+        "pos": 22,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ASGFSITSYYIHWVR",
+        "pos": 23,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SGFSITSYYIHWVRQ",
+        "pos": 24,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GFSITSYYIHWVRQA",
+        "pos": 25,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "FSITSYYIHWVRQAP",
+        "pos": 26,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SITSYYIHWVRQAPG",
+        "pos": 27,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITSYYIHWVRQAPGK",
+        "pos": 28,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TSYYIHWVRQAPGKG",
+        "pos": 29,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYYIHWVRQAPGKGL",
+        "pos": 30,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYIHWVRQAPGKGLE",
+        "pos": 31,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YIHWVRQAPGKGLEW",
+        "pos": 32,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IHWVRQAPGKGLEWV",
+        "pos": 33,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "HWVRQAPGKGLEWVA",
+        "pos": 34,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WVRQAPGKGLEWVAR",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VRQAPGKGLEWVARI",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RQAPGKGLEWVARII",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QAPGKGLEWVARIIS",
+        "pos": 38,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APGKGLEWVARIISS",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKGLEWVARIISSY",
+        "pos": 40,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKGLEWVARIISSYS",
+        "pos": 41,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KGLEWVARIISSYSY",
+        "pos": 42,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GLEWVARIISSYSYT",
+        "pos": 43,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LEWVARIISSYSYTR",
+        "pos": 44,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "EWVARIISSYSYTRY",
+        "pos": 45,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "WVARIISSYSYTRYA",
+        "pos": 46,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VARIISSYSYTRYAD",
+        "pos": 47,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ARIISSYSYTRYADS",
+        "pos": 48,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RIISSYSYTRYADSV",
+        "pos": 49,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IISSYSYTRYADSVK",
+        "pos": 50,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSYSYTRYADSVKG",
+        "pos": 51,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYTRYADSVKGRF",
+        "pos": 53,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYTRYADSVKGRFT",
+        "pos": 54,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYTRYADSVKGRFTI",
+        "pos": 55,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YTRYADSVKGRFTIS",
+        "pos": 56,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AYLQMNSLRAEDTAV",
+        "pos": 78,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YLQMNSLRAEDTAVY",
+        "pos": 79,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQMNSLRAEDTAVYY",
+        "pos": 80,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QMNSLRAEDTAVYYC",
+        "pos": 81,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "MNSLRAEDTAVYYCA",
+        "pos": 82,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AEDTAVYYCARSSYY",
+        "pos": 87,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDTAVYYCARSSYYG",
+        "pos": 88,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DTAVYYCARSSYYGY",
+        "pos": 89,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TAVYYCARSSYYGYY",
+        "pos": 90,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "AVYYCARSSYYGYYY",
+        "pos": 91,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VYYCARSSYYGYYYY",
+        "pos": 92,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYCARSSYYGYYYYY",
+        "pos": 93,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YCARSSYYGYYYYYW",
+        "pos": 94,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "CARSSYYGYYYYYWG",
+        "pos": 95,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ARSSYYGYYYYYWGQ",
+        "pos": 96,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "RSSYYGYYYYYWGQG",
+        "pos": 97,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SSYYGYYYYYWGQGT",
+        "pos": 98,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SYYGYYYYYWGQGTL",
+        "pos": 99,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYGYYYYYWGQGTLV",
+        "pos": 100,
+        "hydrophobic_count": 10,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YGYYYYYWGQGTLVT",
+        "pos": 101,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYYYYYWGQGTLVTV",
+        "pos": 102,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYYYYWGQGTLVTVS",
+        "pos": 103,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYYYWGQGTLVTVSS",
+        "pos": 104,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VTITCRASQSVSTFL",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITCRASQSVSTFLSW",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TCRASQSVSTFLSWY",
+        "pos": 21,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CRASQSVSTFLSWYQ",
+        "pos": 22,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RASQSVSTFLSWYQQ",
+        "pos": 23,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ASQSVSTFLSWYQQK",
+        "pos": 24,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SQSVSTFLSWYQQKP",
+        "pos": 25,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSVSTFLSWYQQKPG",
+        "pos": 26,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SVSTFLSWYQQKPGK",
+        "pos": 27,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VSTFLSWYQQKPGKA",
+        "pos": 28,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FLSWYQQKPGKAPKL",
+        "pos": 31,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSWYQQKPGKAPKLL",
+        "pos": 32,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SWYQQKPGKAPKLLI",
+        "pos": 33,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WYQQKPGKAPKLLIY",
+        "pos": 34,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YQQKPGKAPKLLIYS",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKAPKLLIYSASSY",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKAPKLLIYSASSYP",
+        "pos": 40,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KAPKLLIYSASSYPS",
+        "pos": 41,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APKLLIYSASSYPSG",
+        "pos": 42,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PKLLIYSASSYPSGV",
+        "pos": 43,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KLLIYSASSYPSGVP",
+        "pos": 44,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LLIYSASSYPSGVPS",
+        "pos": 45,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LIYSASSYPSGVPSR",
+        "pos": 46,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IYSASSYPSGVPSRF",
+        "pos": 47,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TDFTLTISSLQPEDF",
+        "pos": 68,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFTLTISSLQPEDFA",
+        "pos": 69,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FTLTISSLQPEDFAT",
+        "pos": 70,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TLTISSLQPEDFATY",
+        "pos": 71,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LTISSLQPEDFATYY",
+        "pos": 72,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TISSLQPEDFATYYC",
+        "pos": 73,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSLQPEDFATYYCR",
+        "pos": 74,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQPEDFATYYCRQSY",
+        "pos": 77,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PEDFATYYCRQSYSY",
+        "pos": 79,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDFATYYCRQSYSYP",
+        "pos": 80,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFATYYCRQSYSYPY",
+        "pos": 81,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FATYYCRQSYSYPYT",
+        "pos": 82,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ATYYCRQSYSYPYTF",
+        "pos": 83,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TYYCRQSYSYPYTFG",
+        "pos": 84,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYCRQSYSYPYTFGQ",
+        "pos": 85,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YCRQSYSYPYTFGQG",
+        "pos": 86,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSYSYPYTFGQGTKV",
+        "pos": 89,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYPYTFGQGTKVE",
+        "pos": 90,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYPYTFGQGTKVEI",
+        "pos": 91,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYPYTFGQGTKVEIK",
+        "pos": 92,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      }
+    ],
+    "mhc2_n_hits": 109,
+    "mhc2_risk": "HIGH",
+    "cdr_mhc2": {
+      "H1": [],
+      "H2": [],
+      "H3": [],
+      "L1": [],
+      "L2": [],
+      "L3": []
+    },
+    "overall_risk": "HIGH"
+  },
+  {
+    "id": "FAP-scFv-6446",
+    "cdrs": {
+      "H1": "GYSITSY",
+      "H2": "ISSYS",
+      "H3": "ARFKGSYYYYYY",
+      "L1": "RASQSISTYIS",
+      "L2": "FASSYPS",
+      "L3": "QQSYSYPFT"
+    },
+    "mhc1_hits": [],
+    "mhc1_n_hits": null,
+    "mhc1_risk": "N/A (MHCflurry not available)",
+    "mhc2_heuristic_hits": [
+      {
+        "peptide": "EVQLVESGGGLVQPG",
+        "pos": 0,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VQLVESGGGLVQPGG",
+        "pos": 1,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LVESGGGLVQPGGSL",
+        "pos": 3,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRLSCAASGYSITSY",
+        "pos": 17,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RLSCAASGYSITSYY",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSCAASGYSITSYYI",
+        "pos": 19,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SCAASGYSITSYYIH",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CAASGYSITSYYIHW",
+        "pos": 21,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AASGYSITSYYIHWV",
+        "pos": 22,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ASGYSITSYYIHWVR",
+        "pos": 23,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SGYSITSYYIHWVRQ",
+        "pos": 24,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYSITSYYIHWVRQA",
+        "pos": 25,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YSITSYYIHWVRQAP",
+        "pos": 26,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SITSYYIHWVRQAPG",
+        "pos": 27,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITSYYIHWVRQAPGK",
+        "pos": 28,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TSYYIHWVRQAPGKG",
+        "pos": 29,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYYIHWVRQAPGKGL",
+        "pos": 30,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYIHWVRQAPGKGLE",
+        "pos": 31,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YIHWVRQAPGKGLEW",
+        "pos": 32,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IHWVRQAPGKGLEWV",
+        "pos": 33,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "HWVRQAPGKGLEWVA",
+        "pos": 34,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WVRQAPGKGLEWVAR",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VRQAPGKGLEWVARI",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RQAPGKGLEWVARII",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QAPGKGLEWVARIIS",
+        "pos": 38,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APGKGLEWVARIISS",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKGLEWVARIISSY",
+        "pos": 40,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKGLEWVARIISSYS",
+        "pos": 41,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KGLEWVARIISSYSY",
+        "pos": 42,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GLEWVARIISSYSYT",
+        "pos": 43,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LEWVARIISSYSYTR",
+        "pos": 44,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "EWVARIISSYSYTRY",
+        "pos": 45,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "WVARIISSYSYTRYA",
+        "pos": 46,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VARIISSYSYTRYAD",
+        "pos": 47,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ARIISSYSYTRYADS",
+        "pos": 48,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RIISSYSYTRYADSV",
+        "pos": 49,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IISSYSYTRYADSVK",
+        "pos": 50,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSYSYTRYADSVKG",
+        "pos": 51,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYTRYADSVKGRF",
+        "pos": 53,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYTRYADSVKGRFT",
+        "pos": 54,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYTRYADSVKGRFTI",
+        "pos": 55,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YTRYADSVKGRFTIS",
+        "pos": 56,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AYLQMNSLRAEDTAV",
+        "pos": 78,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YLQMNSLRAEDTAVY",
+        "pos": 79,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQMNSLRAEDTAVYY",
+        "pos": 80,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QMNSLRAEDTAVYYC",
+        "pos": 81,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "MNSLRAEDTAVYYCA",
+        "pos": 82,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SLRAEDTAVYYCARF",
+        "pos": 84,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRAEDTAVYYCARFK",
+        "pos": 85,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDTAVYYCARFKGSY",
+        "pos": 88,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DTAVYYCARFKGSYY",
+        "pos": 89,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TAVYYCARFKGSYYY",
+        "pos": 90,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "AVYYCARFKGSYYYY",
+        "pos": 91,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VYYCARFKGSYYYYY",
+        "pos": 92,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYCARFKGSYYYYYY",
+        "pos": 93,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YCARFKGSYYYYYYW",
+        "pos": 94,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "CARFKGSYYYYYYWG",
+        "pos": 95,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ARFKGSYYYYYYWGQ",
+        "pos": 96,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "RFKGSYYYYYYWGQG",
+        "pos": 97,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "FKGSYYYYYYWGQGT",
+        "pos": 98,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "KGSYYYYYYWGQGTL",
+        "pos": 99,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GSYYYYYYWGQGTLV",
+        "pos": 100,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SYYYYYYWGQGTLVT",
+        "pos": 101,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYYYYYWGQGTLVTV",
+        "pos": 102,
+        "hydrophobic_count": 10,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYYYYWGQGTLVTVS",
+        "pos": 103,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYYYWGQGTLVTVSS",
+        "pos": 104,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VTITCRASQSISTYI",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITCRASQSISTYISW",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TCRASQSISTYISWY",
+        "pos": 21,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CRASQSISTYISWYQ",
+        "pos": 22,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RASQSISTYISWYQQ",
+        "pos": 23,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ASQSISTYISWYQQK",
+        "pos": 24,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SQSISTYISWYQQKP",
+        "pos": 25,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSISTYISWYQQKPG",
+        "pos": 26,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SISTYISWYQQKPGK",
+        "pos": 27,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISTYISWYQQKPGKA",
+        "pos": 28,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YISWYQQKPGKAPKL",
+        "pos": 31,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISWYQQKPGKAPKLL",
+        "pos": 32,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SWYQQKPGKAPKLLI",
+        "pos": 33,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WYQQKPGKAPKLLIY",
+        "pos": 34,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YQQKPGKAPKLLIYF",
+        "pos": 35,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QQKPGKAPKLLIYFA",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QKPGKAPKLLIYFAS",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KPGKAPKLLIYFASS",
+        "pos": 38,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKAPKLLIYFASSY",
+        "pos": 39,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKAPKLLIYFASSYP",
+        "pos": 40,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KAPKLLIYFASSYPS",
+        "pos": 41,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APKLLIYFASSYPSG",
+        "pos": 42,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PKLLIYFASSYPSGV",
+        "pos": 43,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "KLLIYFASSYPSGVP",
+        "pos": 44,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LLIYFASSYPSGVPS",
+        "pos": 45,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LIYFASSYPSGVPSR",
+        "pos": 46,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IYFASSYPSGVPSRF",
+        "pos": 47,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YFASSYPSGVPSRFS",
+        "pos": 48,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TDFTLTISSLQPEDF",
+        "pos": 68,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFTLTISSLQPEDFA",
+        "pos": 69,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FTLTISSLQPEDFAT",
+        "pos": 70,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TLTISSLQPEDFATY",
+        "pos": 71,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LTISSLQPEDFATYY",
+        "pos": 72,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TISSLQPEDFATYYC",
+        "pos": 73,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSLQPEDFATYYCQ",
+        "pos": 74,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQPEDFATYYCQQSY",
+        "pos": 77,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PEDFATYYCQQSYSY",
+        "pos": 79,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDFATYYCQQSYSYP",
+        "pos": 80,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFATYYCQQSYSYPF",
+        "pos": 81,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FATYYCQQSYSYPFT",
+        "pos": 82,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ATYYCQQSYSYPFTF",
+        "pos": 83,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TYYCQQSYSYPFTFG",
+        "pos": 84,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYCQQSYSYPFTFGQ",
+        "pos": 85,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YCQQSYSYPFTFGQG",
+        "pos": 86,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSYSYPFTFGQGTKV",
+        "pos": 89,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYPFTFGQGTKVE",
+        "pos": 90,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYPFTFGQGTKVEI",
+        "pos": 91,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYPFTFGQGTKVEIK",
+        "pos": 92,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      }
+    ],
+    "mhc2_n_hits": 114,
+    "mhc2_risk": "HIGH",
+    "cdr_mhc2": {
+      "H1": [],
+      "H2": [],
+      "H3": [],
+      "L1": [],
+      "L2": [],
+      "L3": []
+    },
+    "overall_risk": "HIGH"
+  },
+  {
+    "id": "FAP-scFv-1536",
+    "cdrs": {
+      "H1": "GYSISSY",
+      "H2": "IFSYS",
+      "H3": "AREYKSSGYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "RASSYPS",
+      "L3": "QQSYSYPFT"
+    },
+    "mhc1_hits": [],
+    "mhc1_n_hits": null,
+    "mhc1_risk": "N/A (MHCflurry not available)",
+    "mhc2_heuristic_hits": [
+      {
+        "peptide": "EVQLVESGGGLVQPG",
+        "pos": 0,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VQLVESGGGLVQPGG",
+        "pos": 1,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LVESGGGLVQPGGSL",
+        "pos": 3,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRLSCAASGYSISSY",
+        "pos": 17,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RLSCAASGYSISSYY",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSCAASGYSISSYYI",
+        "pos": 19,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SCAASGYSISSYYIH",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CAASGYSISSYYIHW",
+        "pos": 21,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AASGYSISSYYIHWV",
+        "pos": 22,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ASGYSISSYYIHWVR",
+        "pos": 23,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SGYSISSYYIHWVRQ",
+        "pos": 24,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYSISSYYIHWVRQA",
+        "pos": 25,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YSISSYYIHWVRQAP",
+        "pos": 26,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SISSYYIHWVRQAPG",
+        "pos": 27,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSYYIHWVRQAPGK",
+        "pos": 28,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SSYYIHWVRQAPGKG",
+        "pos": 29,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYYIHWVRQAPGKGL",
+        "pos": 30,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYIHWVRQAPGKGLE",
+        "pos": 31,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YIHWVRQAPGKGLEW",
+        "pos": 32,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IHWVRQAPGKGLEWV",
+        "pos": 33,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "HWVRQAPGKGLEWVA",
+        "pos": 34,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WVRQAPGKGLEWVAR",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VRQAPGKGLEWVARI",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RQAPGKGLEWVARII",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QAPGKGLEWVARIIF",
+        "pos": 38,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APGKGLEWVARIIFS",
+        "pos": 39,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKGLEWVARIIFSY",
+        "pos": 40,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GKGLEWVARIIFSYS",
+        "pos": 41,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "KGLEWVARIIFSYSY",
+        "pos": 42,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GLEWVARIIFSYSYT",
+        "pos": 43,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LEWVARIIFSYSYTR",
+        "pos": 44,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "EWVARIIFSYSYTRY",
+        "pos": 45,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "WVARIIFSYSYTRYA",
+        "pos": 46,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VARIIFSYSYTRYAD",
+        "pos": 47,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ARIIFSYSYTRYADS",
+        "pos": 48,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RIIFSYSYTRYADSV",
+        "pos": 49,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "IIFSYSYTRYADSVK",
+        "pos": 50,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "IFSYSYTRYADSVKG",
+        "pos": 51,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FSYSYTRYADSVKGR",
+        "pos": 52,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYTRYADSVKGRF",
+        "pos": 53,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYTRYADSVKGRFT",
+        "pos": 54,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYTRYADSVKGRFTI",
+        "pos": 55,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YTRYADSVKGRFTIS",
+        "pos": 56,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AYLQMNSLRAEDTAV",
+        "pos": 78,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YLQMNSLRAEDTAVY",
+        "pos": 79,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQMNSLRAEDTAVYY",
+        "pos": 80,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QMNSLRAEDTAVYYC",
+        "pos": 81,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "MNSLRAEDTAVYYCA",
+        "pos": 82,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRAEDTAVYYCAREY",
+        "pos": 85,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TAVYYCAREYKSSGY",
+        "pos": 90,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AVYYCAREYKSSGYY",
+        "pos": 91,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VYYCAREYKSSGYYY",
+        "pos": 92,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYCAREYKSSGYYYW",
+        "pos": 93,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YCAREYKSSGYYYWG",
+        "pos": 94,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CAREYKSSGYYYWGQ",
+        "pos": 95,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AREYKSSGYYYWGQG",
+        "pos": 96,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "REYKSSGYYYWGQGT",
+        "pos": 97,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EYKSSGYYYWGQGTL",
+        "pos": 98,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YKSSGYYYWGQGTLV",
+        "pos": 99,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "KSSGYYYWGQGTLVT",
+        "pos": 100,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SSGYYYWGQGTLVTV",
+        "pos": 101,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SGYYYWGQGTLVTVS",
+        "pos": 102,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYYYWGQGTLVTVSS",
+        "pos": 103,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VTITCRASQSVSTFL",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITCRASQSVSTFLSW",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TCRASQSVSTFLSWY",
+        "pos": 21,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CRASQSVSTFLSWYQ",
+        "pos": 22,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RASQSVSTFLSWYQQ",
+        "pos": 23,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ASQSVSTFLSWYQQK",
+        "pos": 24,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SQSVSTFLSWYQQKP",
+        "pos": 25,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSVSTFLSWYQQKPG",
+        "pos": 26,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SVSTFLSWYQQKPGK",
+        "pos": 27,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VSTFLSWYQQKPGKA",
+        "pos": 28,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FLSWYQQKPGKAPKL",
+        "pos": 31,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSWYQQKPGKAPKLL",
+        "pos": 32,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SWYQQKPGKAPKLLI",
+        "pos": 33,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WYQQKPGKAPKLLIY",
+        "pos": 34,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YQQKPGKAPKLLIYR",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKAPKLLIYRASSY",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKAPKLLIYRASSYP",
+        "pos": 40,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KAPKLLIYRASSYPS",
+        "pos": 41,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APKLLIYRASSYPSG",
+        "pos": 42,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PKLLIYRASSYPSGV",
+        "pos": 43,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KLLIYRASSYPSGVP",
+        "pos": 44,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LLIYRASSYPSGVPS",
+        "pos": 45,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LIYRASSYPSGVPSR",
+        "pos": 46,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IYRASSYPSGVPSRF",
+        "pos": 47,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TDFTLTISSLQPEDF",
+        "pos": 68,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFTLTISSLQPEDFA",
+        "pos": 69,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FTLTISSLQPEDFAT",
+        "pos": 70,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TLTISSLQPEDFATY",
+        "pos": 71,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LTISSLQPEDFATYY",
+        "pos": 72,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TISSLQPEDFATYYC",
+        "pos": 73,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSLQPEDFATYYCQ",
+        "pos": 74,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQPEDFATYYCQQSY",
+        "pos": 77,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PEDFATYYCQQSYSY",
+        "pos": 79,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDFATYYCQQSYSYP",
+        "pos": 80,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFATYYCQQSYSYPF",
+        "pos": 81,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FATYYCQQSYSYPFT",
+        "pos": 82,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ATYYCQQSYSYPFTF",
+        "pos": 83,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TYYCQQSYSYPFTFG",
+        "pos": 84,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYCQQSYSYPFTFGQ",
+        "pos": 85,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YCQQSYSYPFTFGQG",
+        "pos": 86,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSYSYPFTFGQGTKV",
+        "pos": 89,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYPFTFGQGTKVE",
+        "pos": 90,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYPFTFGQGTKVEI",
+        "pos": 91,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYPFTFGQGTKVEIK",
+        "pos": 92,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      }
+    ],
+    "mhc2_n_hits": 107,
+    "mhc2_risk": "HIGH",
+    "cdr_mhc2": {
+      "H1": [],
+      "H2": [],
+      "H3": [],
+      "L1": [],
+      "L2": [],
+      "L3": []
+    },
+    "overall_risk": "HIGH"
+  },
+  {
+    "id": "FAP-scFv-4766",
+    "cdrs": {
+      "H1": "GYTISSY",
+      "H2": "IFSYS",
+      "H3": "ARKYGSYYYGYYY",
+      "L1": "RASQSISTYLS",
+      "L2": "YASSRPS",
+      "L3": "QQSYSYPFT"
+    },
+    "mhc1_hits": [],
+    "mhc1_n_hits": null,
+    "mhc1_risk": "N/A (MHCflurry not available)",
+    "mhc2_heuristic_hits": [
+      {
+        "peptide": "EVQLVESGGGLVQPG",
+        "pos": 0,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VQLVESGGGLVQPGG",
+        "pos": 1,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LVESGGGLVQPGGSL",
+        "pos": 3,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRLSCAASGYTISSY",
+        "pos": 17,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RLSCAASGYTISSYY",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSCAASGYTISSYYI",
+        "pos": 19,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SCAASGYTISSYYIH",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CAASGYTISSYYIHW",
+        "pos": 21,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AASGYTISSYYIHWV",
+        "pos": 22,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ASGYTISSYYIHWVR",
+        "pos": 23,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SGYTISSYYIHWVRQ",
+        "pos": 24,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYTISSYYIHWVRQA",
+        "pos": 25,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YTISSYYIHWVRQAP",
+        "pos": 26,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "TISSYYIHWVRQAPG",
+        "pos": 27,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSYYIHWVRQAPGK",
+        "pos": 28,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SSYYIHWVRQAPGKG",
+        "pos": 29,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYYIHWVRQAPGKGL",
+        "pos": 30,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYIHWVRQAPGKGLE",
+        "pos": 31,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YIHWVRQAPGKGLEW",
+        "pos": 32,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IHWVRQAPGKGLEWV",
+        "pos": 33,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "HWVRQAPGKGLEWVA",
+        "pos": 34,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WVRQAPGKGLEWVAR",
+        "pos": 35,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "VRQAPGKGLEWVARI",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RQAPGKGLEWVARII",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QAPGKGLEWVARIIF",
+        "pos": 38,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APGKGLEWVARIIFS",
+        "pos": 39,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKGLEWVARIIFSY",
+        "pos": 40,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GKGLEWVARIIFSYS",
+        "pos": 41,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "KGLEWVARIIFSYSY",
+        "pos": 42,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GLEWVARIIFSYSYT",
+        "pos": 43,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "LEWVARIIFSYSYTR",
+        "pos": 44,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "EWVARIIFSYSYTRY",
+        "pos": 45,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "WVARIIFSYSYTRYA",
+        "pos": 46,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VARIIFSYSYTRYAD",
+        "pos": 47,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ARIIFSYSYTRYADS",
+        "pos": 48,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RIIFSYSYTRYADSV",
+        "pos": 49,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "IIFSYSYTRYADSVK",
+        "pos": 50,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "IFSYSYTRYADSVKG",
+        "pos": 51,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FSYSYTRYADSVKGR",
+        "pos": 52,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYTRYADSVKGRF",
+        "pos": 53,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYTRYADSVKGRFT",
+        "pos": 54,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYTRYADSVKGRFTI",
+        "pos": 55,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YTRYADSVKGRFTIS",
+        "pos": 56,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "AYLQMNSLRAEDTAV",
+        "pos": 78,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YLQMNSLRAEDTAVY",
+        "pos": 79,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQMNSLRAEDTAVYY",
+        "pos": 80,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QMNSLRAEDTAVYYC",
+        "pos": 81,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "MNSLRAEDTAVYYCA",
+        "pos": 82,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LRAEDTAVYYCARKY",
+        "pos": 85,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDTAVYYCARKYGSY",
+        "pos": 88,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DTAVYYCARKYGSYY",
+        "pos": 89,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TAVYYCARKYGSYYY",
+        "pos": 90,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "AVYYCARKYGSYYYG",
+        "pos": 91,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VYYCARKYGSYYYGY",
+        "pos": 92,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYCARKYGSYYYGYY",
+        "pos": 93,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YCARKYGSYYYGYYY",
+        "pos": 94,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "CARKYGSYYYGYYYW",
+        "pos": 95,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "ARKYGSYYYGYYYWG",
+        "pos": 96,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "RKYGSYYYGYYYWGQ",
+        "pos": 97,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "KYGSYYYGYYYWGQG",
+        "pos": 98,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YGSYYYGYYYWGQGT",
+        "pos": 99,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GSYYYGYYYWGQGTL",
+        "pos": 100,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "SYYYGYYYWGQGTLV",
+        "pos": 101,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYYGYYYWGQGTLVT",
+        "pos": 102,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YYGYYYWGQGTLVTV",
+        "pos": 103,
+        "hydrophobic_count": 9,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "YGYYYWGQGTLVTVS",
+        "pos": 104,
+        "hydrophobic_count": 8,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "GYYYWGQGTLVTVSS",
+        "pos": 105,
+        "hydrophobic_count": 7,
+        "risk": "HIGH"
+      },
+      {
+        "peptide": "VTITCRASQSISTYL",
+        "pos": 18,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ITCRASQSISTYLSW",
+        "pos": 20,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TCRASQSISTYLSWY",
+        "pos": 21,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "CRASQSISTYLSWYQ",
+        "pos": 22,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "RASQSISTYLSWYQQ",
+        "pos": 23,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ASQSISTYLSWYQQK",
+        "pos": 24,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SQSISTYLSWYQQKP",
+        "pos": 25,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSISTYLSWYQQKPG",
+        "pos": 26,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SISTYLSWYQQKPGK",
+        "pos": 27,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISTYLSWYQQKPGKA",
+        "pos": 28,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YLSWYQQKPGKAPKL",
+        "pos": 31,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LSWYQQKPGKAPKLL",
+        "pos": 32,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SWYQQKPGKAPKLLI",
+        "pos": 33,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "WYQQKPGKAPKLLIY",
+        "pos": 34,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YQQKPGKAPKLLIYY",
+        "pos": 35,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QQKPGKAPKLLIYYA",
+        "pos": 36,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QKPGKAPKLLIYYAS",
+        "pos": 37,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KPGKAPKLLIYYASS",
+        "pos": 38,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PGKAPKLLIYYASSR",
+        "pos": 39,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "GKAPKLLIYYASSRP",
+        "pos": 40,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KAPKLLIYYASSRPS",
+        "pos": 41,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "APKLLIYYASSRPSG",
+        "pos": 42,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PKLLIYYASSRPSGV",
+        "pos": 43,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "KLLIYYASSRPSGVP",
+        "pos": 44,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LLIYYASSRPSGVPS",
+        "pos": 45,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LIYYASSRPSGVPSR",
+        "pos": 46,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "IYYASSRPSGVPSRF",
+        "pos": 47,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TDFTLTISSLQPEDF",
+        "pos": 68,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFTLTISSLQPEDFA",
+        "pos": 69,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FTLTISSLQPEDFAT",
+        "pos": 70,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TLTISSLQPEDFATY",
+        "pos": 71,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LTISSLQPEDFATYY",
+        "pos": 72,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TISSLQPEDFATYYC",
+        "pos": 73,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ISSLQPEDFATYYCQ",
+        "pos": 74,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "LQPEDFATYYCQQSY",
+        "pos": 77,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "PEDFATYYCQQSYSY",
+        "pos": 79,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "EDFATYYCQQSYSYP",
+        "pos": 80,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "DFATYYCQQSYSYPF",
+        "pos": 81,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "FATYYCQQSYSYPFT",
+        "pos": 82,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "ATYYCQQSYSYPFTF",
+        "pos": 83,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "TYYCQQSYSYPFTFG",
+        "pos": 84,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YYCQQSYSYPFTFGQ",
+        "pos": 85,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YCQQSYSYPFTFGQG",
+        "pos": 86,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "QSYSYPFTFGQGTKV",
+        "pos": 89,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYSYPFTFGQGTKVE",
+        "pos": 90,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "YSYPFTFGQGTKVEI",
+        "pos": 91,
+        "hydrophobic_count": 6,
+        "risk": "MOD"
+      },
+      {
+        "peptide": "SYPFTFGQGTKVEIK",
+        "pos": 92,
+        "hydrophobic_count": 5,
+        "risk": "MOD"
+      }
+    ],
+    "mhc2_n_hits": 114,
+    "mhc2_risk": "HIGH",
+    "cdr_mhc2": {
+      "H1": [],
+      "H2": [],
+      "H3": [],
+      "L1": [],
+      "L2": [],
+      "L3": []
+    },
+    "overall_risk": "HIGH"
+  }
+]
