@@ -1,5 +1,59 @@
 [
   {
+    "id": "FAP-scFv-12534",
+    "rank_esm2": 1,
+    "cdrs": {
+      "H1": "GFSITSY",
+      "H2": "ISSYS",
+      "H3": "ARYYGSSGYFAY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGFSITSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARYYGSSGYFAYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "esm2_pll": -0.2779,
+    "dev_score": 73.0,
+    "pI": 9.21,
+    "camSol": -0.079,
+    "humanness": "HIGH",
+    "vh_germline": 0.905,
+    "vl_germline": 0.909,
+    "fr_liabilities": [
+      "탈아미드화 NG/NS pos84 'NS'",
+      "산화 Met pos83 'M'",
+      "산화 Met pos4 'M'"
+    ],
+    "patent_max_sim": 54.5
+  },
+  {
+    "id": "FAP-scFv-13034",
+    "rank_esm2": 7,
+    "cdrs": {
+      "H1": "GFSITSY",
+      "H2": "ISSYS",
+      "H3": "ARSSYYGYYYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGFSITSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARSSYYGYYYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "esm2_pll": -0.2787,
+    "dev_score": 73.0,
+    "pI": 9.28,
+    "camSol": -0.08,
+    "humanness": "HIGH",
+    "vh_germline": 0.905,
+    "vl_germline": 0.909,
+    "fr_liabilities": [
+      "탈아미드화 NG/NS pos84 'NS'",
+      "산화 Met pos83 'M'",
+      "산화 Met pos4 'M'"
+    ],
+    "patent_max_sim": 50.0
+  },
+  {
     "id": "FAP-scFv-6446",
     "cdrs": {
       "H1": "GYSITSY",
@@ -16,45 +70,9 @@
     "camSol": -0.083,
     "humanness": "HIGH",
     "vh_germline": 0.895,
-    "vl_germline": 0.886
-  },
-  {
-    "id": "FAP-scFv-13781",
-    "cdrs": {
-      "H1": "GFSITSY",
-      "H2": "IFSYS",
-      "H3": "ARYYGSSGYFAY",
-      "L1": "RASQSVSTFLS",
-      "L2": "SASSYPS",
-      "L3": "QQSYSYPFT"
-    },
-    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGFSITSYYIHWVRQAPGKGLEWVARIIFSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARYYGSSGYFAYWGQGTLVTVSS",
-    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCQQSYSYPFTFGQGTKVEIK",
-    "dev_score": 73.0,
-    "pI": 9.21,
-    "camSol": -0.079,
-    "humanness": "HIGH",
-    "vh_germline": 0.905,
-    "vl_germline": 0.909
-  },
-  {
-    "id": "FAP-scFv-9356",
-    "cdrs": {
-      "H1": "GYSITSY",
-      "H2": "IKYTS",
-      "H3": "ARSSYYGYYYYY",
-      "L1": "RASQSVSTFIS",
-      "L2": "SASSYPS",
-      "L3": "QQSYSYPFT"
-    },
-    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSITSYYIHWVRQAPGKGLEWVARIIKYTSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARSSYYGYYYYYWGQGTLVTVSS",
-    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFISWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCQQSYSYPFTFGQGTKVEIK",
-    "dev_score": 73.0,
-    "pI": 9.36,
-    "camSol": -0.077,
-    "humanness": "HIGH",
-    "vh_germline": 0.895,
-    "vl_germline": 0.909
+    "vl_germline": 0.886,
+    "rank_esm2": "N/A (top5 diversity)",
+    "patent_max_sim": 50.0
   },
   {
     "id": "FAP-scFv-1536",
@@ -73,7 +91,9 @@
     "camSol": -0.066,
     "humanness": "HIGH",
     "vh_germline": 0.895,
-    "vl_germline": 0.898
+    "vl_germline": 0.898,
+    "rank_esm2": "N/A (top5 diversity)",
+    "patent_max_sim": 54.5
   },
   {
     "id": "FAP-scFv-4766",
@@ -92,6 +112,8 @@
     "camSol": -0.078,
     "humanness": "HIGH",
     "vh_germline": 0.895,
-    "vl_germline": 0.886
+    "vl_germline": 0.886,
+    "rank_esm2": "N/A (top5 diversity)",
+    "patent_max_sim": 50.0
   }
 ]
