@@ -1,0 +1,132 @@
+[
+  {
+    "id": "FAP-scFv-0284",
+    "esm2_pll": -0.2763,
+    "cdrs": {
+      "H1": "GYSISSY",
+      "H2": "ISSYS",
+      "H3": "ARDYYSSGYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSISSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARDYYSSGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "dev_score": 73.0,
+    "dev_level": "GOOD (소규모 최적화)",
+    "pI": 9.17,
+    "gravy": -0.332,
+    "camSol": -0.067,
+    "humanness": "HIGH",
+    "vh_germline": 0.895,
+    "vl_germline": 0.909,
+    "flags": [
+      "CDR 소수성/양전하 패치 다수",
+      "용해도 위험 (CamSol < 0)"
+    ]
+  },
+  {
+    "id": "FAP-scFv-9709",
+    "esm2_pll": -0.2764,
+    "cdrs": {
+      "H1": "GYSISKY",
+      "H2": "ISSYS",
+      "H3": "ARDYYSSGYYY",
+      "L1": "RASQSISSFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSISKYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARDYYSSGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSISSFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "dev_score": 73.0,
+    "dev_level": "GOOD (소규모 최적화)",
+    "pI": 9.38,
+    "gravy": -0.345,
+    "camSol": -0.065,
+    "humanness": "HIGH",
+    "vh_germline": 0.895,
+    "vl_germline": 0.886,
+    "flags": [
+      "CDR 소수성/양전하 패치 다수",
+      "용해도 위험 (CamSol < 0)"
+    ]
+  },
+  {
+    "id": "FAP-scFv-12784",
+    "esm2_pll": -0.2765,
+    "cdrs": {
+      "H1": "GFSITSY",
+      "H2": "ISSYS",
+      "H3": "ARDYYSSGYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGFSITSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARDYYSSGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "dev_score": 73.0,
+    "dev_level": "GOOD (소규모 최적화)",
+    "pI": 9.18,
+    "gravy": -0.315,
+    "camSol": -0.068,
+    "humanness": "HIGH",
+    "vh_germline": 0.905,
+    "vl_germline": 0.909,
+    "flags": [
+      "CDR 소수성/양전하 패치 다수",
+      "용해도 위험 (CamSol < 0)"
+    ]
+  },
+  {
+    "id": "FAP-scFv-10284",
+    "esm2_pll": -0.2769,
+    "cdrs": {
+      "H1": "GYSISKY",
+      "H2": "IYTYS",
+      "H3": "ARDYYSSGYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSISKYYIHWVRQAPGKGLEWVARIIYTYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARDYYSSGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "dev_score": 73.0,
+    "dev_level": "GOOD (소규모 최적화)",
+    "pI": 9.36,
+    "gravy": -0.347,
+    "camSol": -0.069,
+    "humanness": "HIGH",
+    "vh_germline": 0.905,
+    "vl_germline": 0.909,
+    "flags": [
+      "CDR 소수성/양전하 패치 다수",
+      "용해도 위험 (CamSol < 0)"
+    ]
+  },
+  {
+    "id": "FAP-scFv-6534",
+    "esm2_pll": -0.2766,
+    "cdrs": {
+      "H1": "GYSITSY",
+      "H2": "ISSYS",
+      "H3": "ARDYYSSGYYY",
+      "L1": "RASQSVSTFLS",
+      "L2": "SASSYPS",
+      "L3": "RQSYSYPYT"
+    },
+    "vh": "EVQLVESGGGLVQPGGSLRLSCAASGYSITSYYIHWVRQAPGKGLEWVARIISSYSYTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCARDYYSSGYYYWGQGTLVTVSS",
+    "vl": "DIQMTQSPSSLSASVGDRVTITCRASQSVSTFLSWYQQKPGKAPKLLIYSASSYPSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCRQSYSYPYTFGQGTKVEIK",
+    "dev_score": 73.0,
+    "dev_level": "GOOD (소규모 최적화)",
+    "pI": 9.17,
+    "gravy": -0.332,
+    "camSol": -0.067,
+    "humanness": "HIGH",
+    "vh_germline": 0.895,
+    "vl_germline": 0.909,
+    "flags": [
+      "CDR 소수성/양전하 패치 다수",
+      "용해도 위험 (CamSol < 0)"
+    ]
+  }
+]
