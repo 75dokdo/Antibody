@@ -80,8 +80,10 @@ CDR_CANDIDATES = {
         "ARYYGSSGYFAY",    # 12 aa, BLAST 유사도 낮음 (Y×4, R×1)
         # 후보 B: Phe/Lys 풍부, Blade 7 F358-R356 접촉
         "ARFKGSYYYYYY",    # 12 aa, 방향족 풍부
-        # 후보 C: 짧고 강한 접촉 (11 aa)
-        "ARDYYSSGYYY",     # 11 aa, D→ not in motif (DA는 안전, DY는 점검: DY OK)
+        # 후보 C: 짧고 강한 접촉 (11 aa) — PatentBLAST 대응: D3E + Y5K 수정
+        # ARDYYSSGYYY → AREYKSSGYYY: MO36(추정) 72.7% → 54.5% (< 60% ✅)
+        # Glu3: 음전하 보존 (FAP E311·D313 반발 회피), Lys5: 양전하 추가 (FAP D313 접촉)
+        "AREYKSSGYYY",     # 11 aa, D3→E + Y5→K, 특허 회피 강화
         # 후보 D: 긴 루프 (13 aa), 넓은 접촉 면적
         "ARKYGSYYYGYYY",   # 13 aa, Lys+Tyr 조합
         # 후보 E: 특허 회피 강화 (희귀 조합)
