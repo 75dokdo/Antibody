@@ -1,0 +1,4 @@
+2026-09-02 05:59:03,431 Running colabfold 1.6.2
+2026-09-02 05:59:03,450 WARNING: no GPU detected, will be using CPU
+2026-09-02 05:59:03,591 Found 2 citations for tools or databases
+2026-09-02 05:59:03,591 Query 1/5: FAP-scFv-1536_H3-C_FAP_ECD_scFv (length 612)
